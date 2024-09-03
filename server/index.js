@@ -3,6 +3,14 @@ const app = express();
 const PORT = 3001;
 const slugify = require('slugify');
 
+app.use(cors());
+
+app.use(cors({
+  origin: 'https://isaac-katana-7gys.onrender.com',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
+
 app.use(express.json());
 
 const blogPosts = [
@@ -17,12 +25,12 @@ const blogPosts = [
     },
     {
         id: 2,
-        thumbnail: 'https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg',
-        title: "The Benefits of Building an Application: Why It’s Worth the Investment",
-        content: "In today's digital world, building an application can be a game-changer for businesses, individuals, and organizations alike. Whether you're a startup founder, a seasoned entrepreneur, or simply passionate about technology, creating an app offers numerous advantages. Here’s a look at some of the key benefits:",
+        thumbnail: 'https://lh3.googleusercontent.com/YRmss6YXRwjGnmq4xuUPJFbh1Fb7fC83BvZyLs4iUsav4_UuaBPGhMv82iLjCvgMe8-32JEghdXyqzTV320PrX_MBha9Y8RqolDQAA=s750',
+        title: "Engaging on Social Media: A Must for Musicians",
+        content: "In the digital age, social media isn't just a tool for communication—it's a powerful platform for building your brand as a musician. Whether you're an emerging artist or an established name, how you engage with your audience online can make or break your career. Here’s why social media engagement is essential and how you can use it to your advantage.",
         video: 'https://www.youtube.com/embed/LxcmF_Kk0Ho?si=smJIKxfwdkTYNwLN',
         dateCreated: new Date(),
-        slug: slugify('The Benefits of Building an Application: Why It’s Worth the Investment', {lower:true})
+        slug: slugify('Engaging on Social Media: A Must for Musicians', {lower:true})
     },
     {
         id: 3,
