@@ -3,6 +3,8 @@ const app = express();
 const PORT = 3001;
 const slugify = require('slugify');
 
+const cors = require('cors');
+
 app.use(cors());
 
 app.use(cors({
