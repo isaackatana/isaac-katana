@@ -1,0 +1,148 @@
+const express = require('express');
+const app = express();
+const PORT = 3001;
+const slugify = require('slugify');
+
+app.use(express.json());
+
+const blogPosts = [
+    {
+        id: 1,
+        thumbnail: 'https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg',
+        title: "The Benefits of Building an Application: Why It’s Worth the Investment",
+        content: "In today's digital world, building an application can be a game-changer for businesses, individuals, and organizations alike. Whether you're a startup founder, a seasoned entrepreneur, or simply passionate about technology, creating an app offers numerous advantages. Here’s a look at some of the key benefits:",
+        video: 'https://www.youtube.com/embed/LxcmF_Kk0Ho?si=smJIKxfwdkTYNwLN',
+        dateCreated: new Date(),
+        slug: slugify('The Benefits of Building an Application: Why It’s Worth the Investment', {lower:true})
+    },
+    {
+        id: 2,
+        thumbnail: 'https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg',
+        title: "The Benefits of Building an Application: Why It’s Worth the Investment",
+        content: "In today's digital world, building an application can be a game-changer for businesses, individuals, and organizations alike. Whether you're a startup founder, a seasoned entrepreneur, or simply passionate about technology, creating an app offers numerous advantages. Here’s a look at some of the key benefits:",
+        video: 'https://www.youtube.com/embed/LxcmF_Kk0Ho?si=smJIKxfwdkTYNwLN',
+        dateCreated: new Date(),
+        slug: slugify('The Benefits of Building an Application: Why It’s Worth the Investment', {lower:true})
+    },
+    {
+        id: 3,
+        thumbnail: 'https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg',
+        title: "The Benefits of Building an Application: Why It’s Worth the Investment",
+        content: "In today's digital world, building an application can be a game-changer for businesses, individuals, and organizations alike. Whether you're a startup founder, a seasoned entrepreneur, or simply passionate about technology, creating an app offers numerous advantages. Here’s a look at some of the key benefits:",
+        video: 'https://www.youtube.com/embed/LxcmF_Kk0Ho?si=smJIKxfwdkTYNwLN',
+        dateCreated: new Date(),
+        slug: slugify('The Benefits of Building an Application: Why It’s Worth the Investment', {lower:true})
+    },
+];
+
+app.get('/api/posts', (req, res) => {
+    const previews = blogPosts.map(post => (
+        { 
+            id: post.id, 
+            thumbnail: post.thumbnail, 
+            title: post.title, 
+            content: post.content,  
+            video: post.video, 
+            dateCreated: post.dateCreated, 
+            slug: post.slug,
+        }
+    )
+    );
+    res.json(previews);
+});
+
+app.get('/api/posts/:slug', (req, res) => {
+    const postSlug = req.params.slug;
+    const post = blogPosts.find(p => p.slug === postSlug);
+    if (post) {
+        res.json(post);
+    } else {
+        res.status(404).json({ message: 'Post not found' });
+    }
+});
+
+const projects = [
+    {
+        thumbnail: '',
+        id: 1,
+        title: 'RiZz Media',
+        slug: slugify('RiZz Media', {lower:true})
+    },
+    {
+        thumbnail: '',
+        id: 2,
+        title: 'Zuru Pwani',
+        slug: slugify('Zuru Pwani', {lower:true})
+    },
+]
+
+app.get('/api/projects', (req, res) => {
+    const previews = projects.map(project => (
+        { 
+            id: project.id, 
+            thumbnail: project.thumbnail, 
+            title: project.title, 
+            slug: project.slug,
+        }
+    )
+    );
+    res.json(previews);
+});
+
+app.get('/api/projects/:slug', (req, res) => {
+    const projectSlug = req.params.slug;
+    const project = projects.find(p => p.slug === projectSlug);
+    if (project) {
+        res.json(project);
+    } else {
+        res.status(404).json({ message: 'Courses not found' });
+    }
+});
+
+const courses = [
+    {
+        thumbnail: '',
+        id: 1,
+        title: 'Computer Packages',
+        slug: slugify('Computer Packages', {lower:true})
+    },
+    {
+        thumbnail: '',
+        id: 2,
+        title: 'Graphics Design',
+        slug: slugify('Graphics Design', {lower:true})
+    },
+    {
+        thumbnail: '',
+        id: 3,
+        title: 'Website Design',
+        slug: slugify('Web Design', {lower:true})
+    },
+]
+
+app.get('/api/courses', (req, res) => {
+    const previews = courses.map(course => (
+        { 
+            id: course.id, 
+            thumbnail: course.thumbnail, 
+            title: course.title, 
+            slug: course.slug,
+        }
+    )
+    );
+    res.json(previews);
+});
+
+app.get('/api/courses/:slug', (req, res) => {
+    const courseSlug = req.params.slug;
+    const course = courses.find(p => p.slug === courseSlug);
+    if (course) {
+        res.json(course);
+    } else {
+        res.status(404).json({ message: 'Courses not found' });
+    }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
