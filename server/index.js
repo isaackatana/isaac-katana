@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
-const PORT = 3001;
+const PORT = 5000;
 const slugify = require('slugify');
+
+const cors = require('cors');
 
 app.use(cors());
 
@@ -16,7 +18,7 @@ app.use(express.json());
 const blogPosts = [
     {
         id: 1,
-        thumbnail: 'https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg',
+        thumbnail: 'https://lh7-us.googleusercontent.com/Qw3ulz0_8T3l3cb17ixfW9bC8I6tvFTS_-JmPdehBK0ZJQ6QWd07Iv1IISx0tS_P8G5nq-VwXyOjDVw7M59KnjY5MWVBKJ3Q_GMfq5hPYZwEnZWzUa0pn1NuL1vYdbAcKz1S-yt2k2_Y6GLe7X3Nbwg',
         title: "The Benefits of Building an Application: Why It’s Worth the Investment",
         content: "In today's digital world, building an application can be a game-changer for businesses, individuals, and organizations alike. Whether you're a startup founder, a seasoned entrepreneur, or simply passionate about technology, creating an app offers numerous advantages. Here’s a look at some of the key benefits:",
         video: 'https://www.youtube.com/embed/LxcmF_Kk0Ho?si=smJIKxfwdkTYNwLN',
@@ -109,19 +111,19 @@ app.get('/api/projects/:slug', (req, res) => {
 
 const courses = [
     {
-        thumbnail: '',
+        thumbnail: 'https://www.wavschools.org/wp-content/uploads/2022/08/Blog-Featured-image-sizing-1024x576.png',
         id: 1,
         title: 'Computer Packages',
         slug: slugify('Computer Packages', {lower:true})
     },
     {
-        thumbnail: '',
+        thumbnail: 'https://assets.bitdegree.org/online-learning-platforms/storage/media/online-graphic-design-courses.o.jpg',
         id: 2,
         title: 'Graphics Design',
         slug: slugify('Graphics Design', {lower:true})
     },
     {
-        thumbnail: '',
+        thumbnail: 'https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/ccb429b9-kids-that-code.jpg',
         id: 3,
         title: 'Website Design',
         slug: slugify('Web Design', {lower:true})
