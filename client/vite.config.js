@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://isaac-katana-server.onrender.com',
+        target: 'https://isaac-katana-server-822u7ia3a-isaackatanas-projects.vercel.app',
         changeOrigin: true,
         },
       },
