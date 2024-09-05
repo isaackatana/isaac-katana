@@ -8,7 +8,7 @@ const cors = require('cors');
 app.use(cors());
 
 app.use(cors({
-  origin: 'https://isaac-katana.vercel.app/',
+  origin: 'https://isaac-katana-client.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
