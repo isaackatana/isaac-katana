@@ -260,32 +260,9 @@ body main .projects {
     padding: 20px;
   }
 }
-body main .projects h2 {
-  margin-bottom: 20px;
-  color: rgb(51, 51, 51);
-}
-body main .projects .categories {
-  font-size: large;
-  background-color: rgb(255, 217, 1);
-  display: flex;
-}
-body main .projects .categories a {
-  width: 125px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-body main .projects .categories a:hover {
-  background-color: #333333;
-  color: white;
-}
-body main .projects .categories .active {
-  background-color: #333333;
-}
 body main .projects .container {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
   padding-top: 10px;
 }
 @media (max-width: 425px) {
@@ -293,45 +270,19 @@ body main .projects .container {
     padding-top: 10px;
   }
 }
-body main .projects .container .music-videos {
-  width: 100vw;
+body main .projects .container a {
+  text-decoration: none;
 }
-body main .projects .container .music-videos h2 {
-  margin-bottom: 20px;
-  font-size: large;
-  background-color: rgb(255, 217, 1);
-  padding: 10px;
-}
-body main .projects .container .music-videos .wrapper {
-  position: relative;
+body main .projects .container a .project-preview {
+  width: 300px;
+  height: 300px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 217, 1);
 }
-body main .projects .container .music-videos .wrapper svg {
-  position: absolute;
-  color: white;
-  font-size: 50px;
-  cursor: pointer;
-}
-body main .projects .container .music-videos .wrapper .left {
-  left: 10px;
-}
-body main .projects .container .music-videos .wrapper .right {
-  right: 10px;
-}
-body main .projects .container .music-videos .wrapper div {
-  width: 100%;
-  height: 460px;
-  position: relative;
-}
-@media (max-width: 425px) {
-  body main .projects .container .music-videos .wrapper div {
-    height: 200px;
-  }
-}
-body main .projects .container .music-videos .wrapper div iframe {
-  width: 100%;
-  height: 100%;
+body main .projects .container a .project-preview h2 {
+  color: #000000;
 }
 body main .courses {
   padding: 30px 80px;
