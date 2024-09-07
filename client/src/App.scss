@@ -490,6 +490,8 @@ body {
 
             div {
                 iframe {
+                    border: none;
+                    
                     @include mobile(){
                         width: 100%;
                         height: 350px;

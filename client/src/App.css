@@ -431,6 +431,9 @@ body main .contact div form div {
   display: flex;
   justify-content: space-between;
 }
+body main .contact div iframe {
+  border: none;
+}
 @media (max-width: 425px) {
   body main .contact div iframe {
     width: 100%;
