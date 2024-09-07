@@ -8,12 +8,14 @@ const cors = require('cors');
 app.use(cors());
 
 app.use(cors({
-  origin: 'https://isaac-katana-client-2byh5lrnr-isaackatanas-projects.vercel.app',
+  origin: 'http://localhost:5173',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 app.use(express.json());
+
+// Blog Posts
 
 const blogPosts = [
     {
@@ -71,6 +73,8 @@ app.get('/api/posts/:slug', (req, res) => {
     }
 });
 
+// Projects
+
 const projects = [
     {
         thumbnail: '',
@@ -108,6 +112,8 @@ app.get('/api/projects/:slug', (req, res) => {
         res.status(404).json({ message: 'Courses not found' });
     }
 });
+
+// Courses
 
 const courses = [
     {
