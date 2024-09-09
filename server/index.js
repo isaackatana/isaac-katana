@@ -17,6 +17,19 @@ app.use(cors({
 
 app.use(express.json());
 
+// Database
+
+const mongoose = require('mongoose');
+
+// Replace with your MongoDB URI
+const mongoURI = 'mongodb+srv://isaackatana_DB:<StillScorpio>@atlascluster.s3kf3gc.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster';
+
+// Connect to MongoDB
+mongoose.connect(mongoURI)
+.then(() => console.log('MongoDB connected successfully'))
+.catch((err) => console.log('MongoDB connection error:', err));
+
+
 // Blog Posts
 
 const blogPosts = [
