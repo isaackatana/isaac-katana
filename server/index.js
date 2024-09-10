@@ -17,19 +17,6 @@ app.use(cors({
 
 app.use(express.json());
 
-// Database
-
-const mongoose = require('mongoose');
-
-// Replace with your MongoDB URI
-const mongoURI = 'mongodb+srv://isaackatana_DB:<StillScorpio>@atlascluster.s3kf3gc.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster';
-
-// Connect to MongoDB
-mongoose.connect(mongoURI)
-.then(() => console.log('MongoDB connected successfully'))
-.catch((err) => console.log('MongoDB connection error:', err));
-
-
 // Blog Posts
 
 const blogPosts = [
@@ -44,21 +31,12 @@ const blogPosts = [
     },
     {
         id: 2,
-        thumbnail: 'https://lh3.googleusercontent.com/YRmss6YXRwjGnmq4xuUPJFbh1Fb7fC83BvZyLs4iUsav4_UuaBPGhMv82iLjCvgMe8-32JEghdXyqzTV320PrX_MBha9Y8RqolDQAA=s750',
-        title: "Engaging on Social Media: A Must for Musicians",
+        thumbnail: 'https://macksennettstudios.net/wp-content/uploads/2022/02/How-to-find-a-recording-studio.jpg',
+        title: "Engaging on Social Media is A Must for Musicians",
         content: "In the digital age, social media isn't just a tool for communication—it's a powerful platform for building your brand as a musician. Whether you're an emerging artist or an established name, how you engage with your audience online can make or break your career. Here’s why social media engagement is essential and how you can use it to your advantage.",
         video: 'https://www.youtube.com/embed/LxcmF_Kk0Ho?si=smJIKxfwdkTYNwLN',
         dateCreated: new Date(),
         slug: slugify('Engaging on Social Media: A Must for Musicians', {lower:true})
-    },
-    {
-        id: 3,
-        thumbnail: 'https://www.byperth.com/wp-content/uploads/2018/04/stock-analyzer-project-architecture-1.jpg',
-        title: "The Benefits of Building an Application: Why It’s Worth the Investment",
-        content: "In today's digital world, building an application can be a game-changer for businesses, individuals, and organizations alike. Whether you're a startup founder, a seasoned entrepreneur, or simply passionate about technology, creating an app offers numerous advantages. Here’s a look at some of the key benefits:",
-        video: 'https://www.youtube.com/embed/LxcmF_Kk0Ho?si=smJIKxfwdkTYNwLN',
-        dateCreated: new Date(),
-        slug: slugify('The Benefits of Building an Application: Why It’s Worth the Investment', {lower:true})
     },
 ];
 
@@ -94,14 +72,26 @@ const projects = [
     {
         thumbnail: '',
         id: 1,
-        title: 'RiZz Media',
-        slug: slugify('RiZz Media', {lower:true})
+        title: 'Music Production',
+        slug: slugify('Music Video', {lower:true})
     },
     {
         thumbnail: '',
         id: 2,
-        title: 'Zuru Pwani',
-        slug: slugify('Zuru Pwani', {lower:true})
+        title: 'Graphics Design',
+        slug: slugify('Graphics Design', {lower:true})
+    },
+    {
+        thumbnail: '',
+        id: 3,
+        title: 'Website Design',
+        slug: slugify('Website Design', {lower:true})
+    },
+    {
+        thumbnail: '',
+        id: 4,
+        title: 'Video Editing',
+        slug: slugify('Video Editing', {lower:true})
     },
 ]
 
@@ -134,8 +124,8 @@ const courses = [
     {
         thumbnail: 'https://www.wavschools.org/wp-content/uploads/2022/08/Blog-Featured-image-sizing-1024x576.png',
         id: 1,
-        title: 'Computer Packages',
-        slug: slugify('Computer Packages', {lower:true})
+        title: 'Music Production',
+        slug: slugify('Music Production', {lower:true})
     },
     {
         thumbnail: 'https://assets.bitdegree.org/online-learning-platforms/storage/media/online-graphic-design-courses.o.jpg',

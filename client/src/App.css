@@ -264,6 +264,7 @@ body main .projects .container {
   display: flex;
   gap: 10px;
   padding-top: 10px;
+  overflow-x: hidden;
 }
 @media (max-width: 425px) {
   body main .projects .container {
@@ -435,7 +436,7 @@ body main .blog {
 }
 body main .blog .container {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   overflow: hidden;
   position: relative;
   display: grid;
