@@ -17,8 +17,8 @@ app.use(cors({
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('<h1>Welcome to the Blog Server</h1><p>Use /post/:id to view a blog post.</p>');
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/index.html'));
 });
 
 // Blog Posts
