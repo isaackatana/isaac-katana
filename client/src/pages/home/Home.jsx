@@ -15,7 +15,7 @@ function Home() {
       <link rel="canonical" href={window.location.href} />
       <meta property="og:url" content={window.location.href} />
       <meta property="og:type" content="website" />
-      <meta property="og:description" content="Software Developer" />
+      <meta property="og:description" content="Audio Engineer, Web Developer" />
     </Helmet>
     <div className='home'>
       <div className="overlay"></div>
@@ -23,7 +23,7 @@ function Home() {
       <div className='wrapper'>
         <div>
           <h1>Hello I'm Isaac</h1>
-          <p>Software Developer</p>
+          <p> Audio Engineer, Web Developer</p>
         </div>
         <Link to="/about">Read more <FontAwesomeIcon icon={faArrowRight}/></Link>
       </div>
