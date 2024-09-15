@@ -23,7 +23,7 @@ function Home() {
       <div className='wrapper'>
         <div>
           <h1>Hello I'm Isaac</h1>
-          <p> Audio Engineer, Web Developer</p>
+          <p>Film Editor, Audio Engineer, Web Developer</p>
         </div>
         <Link to="/about">Read more <FontAwesomeIcon icon={faArrowRight}/></Link>
       </div>
