@@ -4,6 +4,7 @@ const PORT = 5000;
 const slugify = require('slugify');
 
 const cors = require('cors');
+app.use(express.json());
 
 // Middleware
 
@@ -15,10 +16,6 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
-app.use(express.json());
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/index.html'));
-});
 
 // Blog Posts
 
@@ -28,7 +25,7 @@ const blogPosts = [
         thumbnail: 'https://lh7-us.googleusercontent.com/Qw3ulz0_8T3l3cb17ixfW9bC8I6tvFTS_-JmPdehBK0ZJQ6QWd07Iv1IISx0tS_P8G5nq-VwXyOjDVw7M59KnjY5MWVBKJ3Q_GMfq5hPYZwEnZWzUa0pn1NuL1vYdbAcKz1S-yt2k2_Y6GLe7X3Nbwg',
         title: "The Benefits of Building an Application: Why It’s Worth the Investment",
         content: "In today's digital world, building an application can be a game-changer for businesses, individuals, and organizations alike. Whether you're a startup founder, a seasoned entrepreneur, or simply passionate about technology, creating an app offers numerous advantages. Here’s a look at some of the key benefits:",
-        video: 'https://www.youtube.com/embed/LxcmF_Kk0Ho?si=smJIKxfwdkTYNwLN',
+        video: "https://www.youtube.com/embed/rdixrl250b4?si=V028oxdhrmFLdTXS",
         dateCreated: new Date(),
         slug: slugify('The Benefits of Building an Application: Why It’s Worth the Investment', {lower:true})
     },
@@ -37,7 +34,7 @@ const blogPosts = [
         thumbnail: 'https://macksennettstudios.net/wp-content/uploads/2022/02/How-to-find-a-recording-studio.jpg',
         title: "Engaging on Social Media is A Must for Musicians",
         content: "In the digital age, social media isn't just a tool for communication—it's a powerful platform for building your brand as a musician. Whether you're an emerging artist or an established name, how you engage with your audience online can make or break your career. Here’s why social media engagement is essential and how you can use it to your advantage.",
-        video: 'https://www.youtube.com/embed/LxcmF_Kk0Ho?si=smJIKxfwdkTYNwLN',
+        video: "https://www.youtube.com/embed/5wsSA93A96E?si=90qZPSwl1hJkdops",
         dateCreated: new Date(),
         slug: slugify('Engaging on Social Media: A Must for Musicians', {lower:true})
     },
