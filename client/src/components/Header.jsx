@@ -37,9 +37,7 @@ function Header() {
 
             <nav>
                 <div className='social-media'>
-                    <Link to='facebook.com/1isaackatana' target='blank'><FontAwesomeIcon icon={faFacebook}/></Link>
-                    <Link to='instagram.com/1isaackatana' target='blank'><FontAwesomeIcon icon={faInstagram}/></Link>
-                    <Link to='instagram.com/1isaackatana' target='blank'><FontAwesomeIcon icon={faXTwitter}/></Link>
+                    
                 </div>
             </nav>
                 <div className="user">
