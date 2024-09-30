@@ -11,7 +11,7 @@ function Footer() {
         <p>©2024 Isaac Katana | All rights reserved.</p>
     </div>
     <div className='social-media'>
-        <Link to='facebook.com/1isaackatana' target='blank'><FontAwesomeIcon icon={faFacebook}/></Link>
+        <a href='facebook.com/1isaackatana' target='blank'><FontAwesomeIcon icon={faFacebook}/></a>
         <Link to='instagram.com/1isaackatana' target='blank'><FontAwesomeIcon icon={faInstagram}/></Link>
         <Link to='instagram.com/1isaackatana' target='blank'><FontAwesomeIcon icon={faXTwitter}/></Link>
     </div>
