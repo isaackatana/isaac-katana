@@ -1,3 +1,4 @@
+import { FaDownload } from 'react-icons/fa'
 import './App.css'
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
   return (
     <>
     <div>
-      Hello World
+      <FaDownload/>
     </div>
     </>
   )
