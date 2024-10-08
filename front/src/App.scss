@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(233, 233, 233);
+    
+}
+
+div {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    svg {
+        font-size: 300px;
+        color: rgb(129, 129, 129);
+        transition: .3s;
+
+        &:hover {
+            color: black;
+            cursor: pointer;
+        }
+    }
+}
