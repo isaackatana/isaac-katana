@@ -1,4 +1,41 @@
 body {
     background-color: rgb(233, 233, 233);
-    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    nav {
+        ul {
+            display: flex;
+            gap: 30px;
+
+            li {
+                list-style: none;
+            }
+        }
+    }
+}
+
+.container {
+    padding: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .social-links {
+        a {
+            margin: 5px;
+
+            svg {
+                font-size: 25px;
+            }
+        }
+    }
 }

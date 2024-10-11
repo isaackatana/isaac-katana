@@ -1,12 +1,12 @@
 
-function Home() {
+function Blog() {
   return (
     <>
     <div className="container">
-      <div>Home</div>
+      <div>Blog</div>
     </div>
     </>
   )
 }
 
-export default Home
+export default Blog
