@@ -28,6 +28,16 @@ header nav ul li {
 .container {
   padding: 10px;
 }
+.container .lyrics-visualizers {
+  display: flex;
+  gap: 10px;
+}
+.container .lyrics-visualizers li {
+  list-style: none;
+  background-color: azure;
+  padding: 10px;
+  width: 300px;
+}
 
 footer {
   display: flex;

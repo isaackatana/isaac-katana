@@ -1,9 +1,12 @@
 
+
 function Home() {
   return (
     <>
     <div className="container">
-      <div>Home</div>
+      <div className="hero">
+        <div>Home</div>
+      </div>
     </div>
     </>
   )

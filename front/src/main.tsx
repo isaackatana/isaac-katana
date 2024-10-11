@@ -12,6 +12,8 @@ import About from './pages/About.tsx';
 import Portfolio from './pages/Portfolio.tsx';
 import Blog from './pages/Blog.tsx';
 import Contact from './pages/Contact.tsx';
+import BlogDetail from './pages/BlogDetail.tsx';
+import PortfolioDetail from './pages/PortfolioDetail.tsx';
 
 const router = createBrowserRouter([
   {
@@ -27,12 +29,20 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
+        path: "/portfolio/:slug",
+        element: <PortfolioDetail />,
+      },
+      {
         path: "/portfolio",
         element: <Portfolio />,
       },
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/blog/:slug",
+        element: <BlogDetail/>
       },
       {
         path: "/contact",

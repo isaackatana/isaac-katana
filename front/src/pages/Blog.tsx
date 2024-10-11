@@ -1,9 +1,11 @@
+import { blogPosts } from "./BlogData"
+import BlogList from "./BlogList"
 
 function Blog() {
   return (
     <>
     <div className="container">
-      <div>Blog</div>
+      <BlogList posts={blogPosts} />
     </div>
     </>
   )
