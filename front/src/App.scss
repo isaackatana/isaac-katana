@@ -44,39 +44,58 @@ header {
     }
 }
 
+.about {
+    padding: 10px;
+
+    .container {
+        padding: 10px;
+        background-color: azure;
+    }
+}
+
 .portfolio {
     padding: 10px;
 
-    a {
+    .container {
         padding: 10px;
-        background-color: azure;
 
-        .portfolio-item {
-            width: 400px;
-
-            img {
-                object-fit: cover;
-            }
-            p {
-                text-wrap: wrap;
+        h2 {
+            margin-bottom: 10px;
+        }
+    
+        a {
+            padding: 10px;
+            background-color: azure;
+    
+            .portfolio-item {
+                width: 100%;
+    
+                img {
+                    object-fit: cover;
+                }
+                p {
+                    text-wrap: wrap;
+                }
             }
         }
-    }
-    .category-filter {
-        display: flex;
-        gap: 5px;
-        margin-bottom: 10px;
-
-        button {
-            width: 150px;
+    
+        .category-filter {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+    
+            button {
+                width: 150px;
+            }
         }
+        
+        .portfolio-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+        }
+    
     }
-    .portfolio-list {
-        display: flex;
-        gap: 10px;
-        overflow: hidden;
-    }
-
 }
 
 .portfolio-detail {
@@ -105,11 +124,11 @@ header {
     padding: 10px;
 
     h2 {
-
+        margin-bottom: 10px;
     }
 
-    
     .container {
+        padding: 10px;
         ul {
             display: flex;
             flex-direction: column;
@@ -136,6 +155,7 @@ header {
         background-color: azure;
     }
 }
+
 
 footer {
     display: flex;

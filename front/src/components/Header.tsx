@@ -5,7 +5,7 @@ function Header() {
     <>
     <header className="header">
       <div className="logo">
-        <h1>IK</h1>
+        <Link to='/'>Logo</Link>
       </div>
       <nav>
         <ul className="nav-links">

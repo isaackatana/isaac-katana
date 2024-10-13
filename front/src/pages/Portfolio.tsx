@@ -15,13 +15,15 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className='portfolio'>
-      <h2>Portfolio</h2>
-      <CategoryFilter
-        categories={categories}
-        selectedCategory={selectedCategory}
-        onCategoryChange={setSelectedCategory}
-      />
-      <PortfolioList items={filteredItems} />
+      <div className="container">
+        <h2>Portfolio</h2>
+        <CategoryFilter
+          categories={categories}
+          selectedCategory={selectedCategory}
+          onCategoryChange={setSelectedCategory}
+        />
+        <PortfolioList items={filteredItems} />
+      </div>
     </div>
   );
 };

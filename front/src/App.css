@@ -25,35 +25,49 @@ header nav ul li {
   list-style: none;
 }
 
-.portfolio {
+.about {
   padding: 10px;
 }
-.portfolio a {
+.about .container {
   padding: 10px;
   background-color: azure;
 }
-.portfolio a .portfolio-item {
-  width: 400px;
+
+.portfolio {
+  padding: 10px;
 }
-.portfolio a .portfolio-item img {
+.portfolio .container {
+  padding: 10px;
+}
+.portfolio .container h2 {
+  margin-bottom: 10px;
+}
+.portfolio .container a {
+  padding: 10px;
+  background-color: azure;
+}
+.portfolio .container a .portfolio-item {
+  width: 100%;
+}
+.portfolio .container a .portfolio-item img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.portfolio a .portfolio-item p {
+.portfolio .container a .portfolio-item p {
   text-wrap: wrap;
 }
-.portfolio .category-filter {
+.portfolio .container .category-filter {
   display: flex;
   gap: 5px;
   margin-bottom: 10px;
 }
-.portfolio .category-filter button {
+.portfolio .container .category-filter button {
   width: 150px;
 }
-.portfolio .portfolio-list {
-  display: flex;
-  gap: 10px;
-  overflow: hidden;
+.portfolio .container .portfolio-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
 }
 
 .portfolio-detail {
@@ -75,6 +89,12 @@ header nav ul li {
 }
 
 .blog {
+  padding: 10px;
+}
+.blog h2 {
+  margin-bottom: 10px;
+}
+.blog .container {
   padding: 10px;
 }
 .blog .container ul {
