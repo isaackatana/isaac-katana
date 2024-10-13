@@ -30,7 +30,23 @@ header nav ul li {
 }
 .about .container {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about .container .wrapper {
+  display: flex;
+  gap: 5px;
+}
+.about .container .wrapper .detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.about .container .wrapper .detail .about-section {
   background-color: azure;
+  padding: 10px;
+  height: 300px;
 }
 
 .portfolio {

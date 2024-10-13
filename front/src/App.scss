@@ -49,7 +49,29 @@ header {
 
     .container {
         padding: 10px;
-        background-color: azure;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .profile-pic {
+            
+        }
+        
+        .wrapper {
+            display: flex;
+            gap: 5px;
+            
+            .detail {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                .about-section{
+                    background-color: azure;
+                    padding: 10px;
+                    height: 300px;
+                }
+            }
+        }
     }
 }
 
@@ -129,6 +151,7 @@ header {
 
     .container {
         padding: 10px;
+
         ul {
             display: flex;
             flex-direction: column;
