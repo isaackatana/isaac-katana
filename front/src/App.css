@@ -145,6 +145,13 @@ header nav ul li .active {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.blog .container ul li a {
+  text-decoration: none;
+  color: black;
+}
+.blog .container ul li a:hover {
+  text-decoration: underline;
+}
 
 .blog-detail {
   padding: 10px;
