@@ -28,16 +28,18 @@ header nav ul li {
 .portfolio {
   padding: 10px;
 }
-.portfolio .portfolio-item {
+.portfolio a {
   padding: 10px;
   background-color: azure;
+}
+.portfolio a .portfolio-item {
   width: 400px;
 }
-.portfolio .portfolio-item img {
+.portfolio a .portfolio-item img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.portfolio .portfolio-item p {
+.portfolio a .portfolio-item p {
   text-wrap: wrap;
 }
 .portfolio .category-filter {
@@ -51,6 +53,25 @@ header nav ul li {
 .portfolio .portfolio-list {
   display: flex;
   gap: 10px;
+  overflow: hidden;
+}
+
+.portfolio-detail {
+  padding: 10px;
+}
+.portfolio-detail .container {
+  background-color: azure;
+  padding: 10px;
+  position: relative;
+}
+.portfolio-detail .container h2 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.portfolio-detail .container img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .blog {
@@ -69,6 +90,14 @@ header nav ul li {
 .blog .container ul li img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.blog-detail {
+  padding: 10px;
+}
+.blog-detail .container {
+  padding: 10px;
+  background-color: azure;
 }
 
 footer {

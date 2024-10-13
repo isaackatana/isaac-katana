@@ -17,10 +17,12 @@ const PortfolioDetail: React.FC = () => {
 
   return (
     <div className="portfolio-detail">
-      <h1>{portfolioItem.title}</h1>
-      <img src={portfolioItem.imageUrl} alt={portfolioItem.title} style={{ width: '100%', height: 'auto' }} />
-      <p><strong>Category:</strong> {portfolioItem.category}</p>
-      <p>{portfolioItem.description}</p>
+      <div className="container">
+        <h2>{portfolioItem.title}</h2>
+        <img src={portfolioItem.imageUrl} alt={portfolioItem.title} style={{ width: '100%', height: '60vh' }} />
+        <p><strong>Category:</strong> {portfolioItem.category}</p>
+        <p>{portfolioItem.description}</p>
+      </div>
     </div>
   );
 };

@@ -13,9 +13,13 @@ const BlogDetail: React.FC = () => {
   }
 
   return (
-    <div>
-      <BlogPost post={post} />
+    <>
+    <div className="blog-detail">
+      <div className='container'>
+        <BlogPost post={post} />
+      </div>
     </div>
+    </>
   );
 };
 

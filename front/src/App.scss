@@ -47,16 +47,19 @@ header {
 .portfolio {
     padding: 10px;
 
-    .portfolio-item {
+    a {
         padding: 10px;
         background-color: azure;
-        width: 400px;
 
-        img {
-            object-fit: cover;
-        }
-        p {
-            text-wrap: wrap;
+        .portfolio-item {
+            width: 400px;
+
+            img {
+                object-fit: cover;
+            }
+            p {
+                text-wrap: wrap;
+            }
         }
     }
     .category-filter {
@@ -71,12 +74,41 @@ header {
     .portfolio-list {
         display: flex;
         gap: 10px;
+        overflow: hidden;
     }
+
+}
+
+.portfolio-detail {
+    padding: 10px;
+
+    .container {
+        background-color: azure;
+        padding: 10px;
+        position: relative;
+
+
+        h2 {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    }
+
 }
 
 .blog {
     padding: 10px;
 
+    h2 {
+
+    }
+
+    
     .container {
         ul {
             display: flex;
@@ -93,6 +125,15 @@ header {
                 }
             }
         }
+    }
+}
+
+.blog-detail {
+    padding: 10px;
+    
+    .container {
+        padding: 10px;
+        background-color: azure;
     }
 }
 
