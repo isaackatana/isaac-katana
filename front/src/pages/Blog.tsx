@@ -4,7 +4,7 @@ import BlogList from "./BlogList"
 function Blog() {
   return (
     <>
-    <div className="container">
+    <div className="blog">
       <BlogList posts={blogPosts} />
     </div>
     </>

@@ -44,20 +44,55 @@ header {
     }
 }
 
-.container {
+.portfolio {
     padding: 10px;
 
-    .lyrics-visualizers {
+    .portfolio-item {
+        padding: 10px;
+        background-color: azure;
+        width: 400px;
+
+        img {
+            object-fit: cover;
+        }
+        p {
+            text-wrap: wrap;
+        }
+    }
+    .category-filter {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 10px;
+
+        button {
+            width: 150px;
+        }
+    }
+    .portfolio-list {
         display: flex;
         gap: 10px;
+    }
+}
 
-        li {
-            list-style: none;
-            background-color: azure;
-            padding: 10px;
-            width: 300px;
+.blog {
+    padding: 10px;
+
+    .container {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            li {
+                background-color: azure;
+                padding: 10px;
+                list-style: none;
+
+                img {
+                    object-fit: cover;
+                }
+            }
         }
-          
     }
 }
 

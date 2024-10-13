@@ -13,7 +13,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ item }) => {
     <>
     <Link to={`/portfolio/${item.slug}`}>
         <div className="portfolio-item">
-        <img src={item.imageUrl} alt={item.title} style={{ width: '300px', height: '200px' }} />
+        <img src={item.imageUrl} alt={item.title} style={{ width: '100%', height: '200px' }} />
         <h3>{item.title}</h3>
         <p>{item.description}</p>
         <p><strong>Category:</strong> {item.category}</p>

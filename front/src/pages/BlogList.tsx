@@ -9,11 +9,12 @@ interface BlogListProps {
 
 const BlogList: React.FC<BlogListProps> = ({ posts }) => {
   return (
-    <div>
-      <h2>Blog Posts</h2>
+    <div className='container'>
+      <h2>Blog</h2>
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
+            <img src={post.imageUrl} style={{ width: '100%', height: '200px' }} alt={post.title} />
             <Link to={`/blog/${post.slug}`}>
               <h3>{post.title}</h3>
             </Link>

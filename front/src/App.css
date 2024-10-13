@@ -25,18 +25,50 @@ header nav ul li {
   list-style: none;
 }
 
-.container {
+.portfolio {
   padding: 10px;
 }
-.container .lyrics-visualizers {
+.portfolio .portfolio-item {
+  padding: 10px;
+  background-color: azure;
+  width: 400px;
+}
+.portfolio .portfolio-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.portfolio .portfolio-item p {
+  text-wrap: wrap;
+}
+.portfolio .category-filter {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.portfolio .category-filter button {
+  width: 150px;
+}
+.portfolio .portfolio-list {
   display: flex;
   gap: 10px;
 }
-.container .lyrics-visualizers li {
-  list-style: none;
+
+.blog {
+  padding: 10px;
+}
+.blog .container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.blog .container ul li {
   background-color: azure;
   padding: 10px;
-  width: 300px;
+  list-style: none;
+}
+.blog .container ul li img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {

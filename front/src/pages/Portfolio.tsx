@@ -14,8 +14,8 @@ const Portfolio: React.FC = () => {
     : portfolioItems.filter(item => item.category === selectedCategory);
 
   return (
-    <div>
-      <h1>My Portfolio</h1>
+    <div className='portfolio'>
+      <h2>Portfolio</h2>
       <CategoryFilter
         categories={categories}
         selectedCategory={selectedCategory}
