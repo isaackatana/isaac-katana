@@ -122,6 +122,7 @@ header nav ul li {
   background-color: azure;
   padding: 10px;
   list-style: none;
+  width: 700px;
 }
 .blog .container ul li img {
   -o-object-fit: cover;
@@ -134,6 +135,10 @@ header nav ul li {
 .blog-detail .container {
   padding: 10px;
   background-color: azure;
+}
+.blog-detail .container img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {

@@ -14,7 +14,7 @@ export interface Blog {
   export const blogPosts: Blog[] = [
     {
       id: 1,
-      imageUrl: "https://via.placeholder.com/300",
+      imageUrl: "https://www.tatvasoft.com/blog/wp-content/uploads/2024/03/How-to-use-Typescript-with-ReactJS_-768x389.jpg",
       title: "Getting Started with React and TypeScript",
       content: "In this post, we will explore the basics of using TypeScript with React...",
       author: "Jane Doe",
@@ -23,7 +23,7 @@ export interface Blog {
     },
     {
       id: 2,
-      imageUrl: "https://via.placeholder.com/300",
+      imageUrl: "https://www.creative-tim.com/blog/content/images/size/w960/wordpress/2021/01/blog-4-1.jpg",
       title: "Building a Blog Page in React",
       content: "Learn how to create a simple blog page using React and TypeScript...",
       author: "John Smith",

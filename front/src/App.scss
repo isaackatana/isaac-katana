@@ -65,6 +65,7 @@ header {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 10px;
+
                 .about-section{
                     background-color: azure;
                     padding: 10px;
@@ -161,6 +162,7 @@ header {
                 background-color: azure;
                 padding: 10px;
                 list-style: none;
+                width: 700px;
 
                 img {
                     object-fit: cover;
@@ -176,6 +178,10 @@ header {
     .container {
         padding: 10px;
         background-color: azure;
+
+        img {
+            object-fit: cover;
+        }
     }
 }
 
