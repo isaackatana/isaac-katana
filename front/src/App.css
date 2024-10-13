@@ -24,6 +24,16 @@ header nav ul {
 header nav ul li {
   list-style: none;
 }
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+header nav ul li .active {
+  text-decoration: underline;
+}
 
 .about {
   padding: 10px;
@@ -58,18 +68,25 @@ header nav ul li {
 .portfolio .container h2 {
   margin-bottom: 10px;
 }
-.portfolio .container a {
+.portfolio .container .portfolio-item {
+  width: 100%;
   padding: 10px;
   background-color: azure;
+  text-decoration: none;
+  color: black;
 }
-.portfolio .container a .portfolio-item {
-  width: 100%;
-}
-.portfolio .container a .portfolio-item img {
+.portfolio .container .portfolio-item img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.portfolio .container a .portfolio-item p {
+.portfolio .container .portfolio-item a {
+  text-decoration: none;
+  color: black;
+}
+.portfolio .container .portfolio-item a:hover {
+  text-decoration: underline;
+}
+.portfolio .container .portfolio-item p {
   text-wrap: wrap;
 }
 .portfolio .container .category-filter {

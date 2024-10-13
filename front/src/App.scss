@@ -39,6 +39,18 @@ header {
 
             li {
                 list-style: none;
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .active {
+                text-decoration: underline;
+            }
             }
         }
     }
@@ -85,22 +97,30 @@ header {
         h2 {
             margin-bottom: 10px;
         }
-    
-        a {
-            padding: 10px;
-            background-color: azure;
-    
+
             .portfolio-item {
                 width: 100%;
+            padding: 10px;
+            background-color: azure;
+            text-decoration: none;
+            color: black;
     
                 img {
                     object-fit: cover;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
                 p {
                     text-wrap: wrap;
                 }
             }
-        }
     
         .category-filter {
             display: flex;

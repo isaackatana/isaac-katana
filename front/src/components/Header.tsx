@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function Header() {
   return (
@@ -9,11 +9,11 @@ function Header() {
       </div>
       <nav>
         <ul className="nav-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/portfolio">Portfolio</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/portfolio">Portfolio</NavLink></li>
+          <li><NavLink to="/blog">Blog</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
       </nav>
     </header>
