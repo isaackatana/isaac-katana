@@ -55,6 +55,11 @@ header .nav2 .social-links svg {
 header .nav2 .burger {
   display: none;
 }
+@media (max-width: 768px) {
+  header .nav2 .burger {
+    display: flex;
+  }
+}
 header .nav2 .burger svg {
   font-size: 25px;
   margin: 5px;
@@ -130,7 +135,11 @@ header .nav2 .burger svg {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
 }
-
+@media (max-width: 768px) {
+  .portfolio .container .portfolio-list {
+    grid-template-columns: 1fr;
+  }
+}
 .portfolio-detail {
   padding: 10px;
 }
@@ -162,6 +171,11 @@ header .nav2 .burger svg {
   padding: 10px;
   list-style: none;
   width: 700px;
+}
+@media (max-width: 768px) {
+  .blog .container ul li {
+    width: 100%;
+  }
 }
 .blog .container ul li img {
   -o-object-fit: cover;

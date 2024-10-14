@@ -75,6 +75,14 @@ header {
 
         .burger {
             display: none;
+
+            @include respond-to(mobile) {
+                display: flex;
+            }
+            
+            @include respond-to(tablet) {
+                // flex-direction: column;
+            }
             svg {
                 font-size: 25px;
                 margin: 5px;
@@ -167,6 +175,13 @@ header {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 5px;
+
+            @include respond-to(mobile) {
+            grid-template-columns: 1fr;
+            }
+            
+            @include respond-to(tablet) {
+            }
         }
     
     }
@@ -206,6 +221,14 @@ header {
                 padding: 10px;
                 list-style: none;
                 width: 700px;
+
+                @include respond-to(mobile) {
+                    width: 100%;
+                }
+                
+                @include respond-to(tablet) {
+                    // flex-direction: column;
+                }
 
                 img {
                     object-fit: cover;
