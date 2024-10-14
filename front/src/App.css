@@ -3,10 +3,15 @@ body {
 }
 
 header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 20px;
+}
+header nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
+  gap: 30px;
 }
 header nav ul {
   display: flex;
@@ -33,6 +38,27 @@ header nav ul li a:hover {
 }
 header nav ul li .active {
   text-decoration: underline;
+}
+header .nav2 {
+  display: flex;
+  justify-content: end;
+}
+header .nav2 .social-links {
+  display: flex;
+  place-items: center;
+}
+header .nav2 .social-links svg {
+  font-size: 25px;
+  margin: 5px;
+  cursor: pointer;
+}
+header .nav2 .burger {
+  display: none;
+}
+header .nav2 .burger svg {
+  font-size: 25px;
+  margin: 5px;
+  cursor: pointer;
 }
 
 .about {

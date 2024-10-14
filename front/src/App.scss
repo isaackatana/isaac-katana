@@ -15,12 +15,16 @@ body {
 }
 
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
     padding: 20px;
 
     nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
         ul {
             display: flex;
             gap: 30px;
@@ -51,6 +55,30 @@ header {
             .active {
                 text-decoration: underline;
             }
+            }
+        }
+    }
+
+    .nav2 {
+        display: flex;
+        justify-content: end;
+        .social-links {
+            display: flex;
+            place-items: center;
+
+            svg {
+                font-size: 25px;
+                margin: 5px;
+                cursor: pointer;
+            }
+        }
+
+        .burger {
+            display: none;
+            svg {
+                font-size: 25px;
+                margin: 5px;
+                cursor: pointer;
             }
         }
     }
