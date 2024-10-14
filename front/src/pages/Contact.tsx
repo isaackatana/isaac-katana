@@ -17,17 +17,23 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Contact Us</h1>
-      <section>
-        <h2>Send a Message</h2>
-        <ContactForm onSubmit={handleContactSubmit} />
-      </section>
-      <section>
-        <h2>Book an Appointment</h2>
-        <AppointmentBooking onBook={handleAppointmentBooking} />
-      </section>
+    <>
+    <div className='contact'>
+      <div className="container">
+        <h2>Contact Us</h2>
+        <div className="wrapper">
+          <section>
+            <h3>Send a Message</h3>
+            <ContactForm onSubmit={handleContactSubmit} />
+          </section>
+          <section>
+            <h3>Book an Appointment</h3>
+            <AppointmentBooking onBook={handleAppointmentBooking} />
+          </section>
+        </div>
+      </div>
     </div>
+    </>
   );
 };
 

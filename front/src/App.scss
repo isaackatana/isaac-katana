@@ -65,9 +65,9 @@ header {
         flex-direction: column;
         gap: 10px;
 
-        .profile-pic {
+        // .profile-pic {
             
-        }
+        // }
         
         .wrapper {
             display: flex;
@@ -98,29 +98,30 @@ header {
             margin-bottom: 10px;
         }
 
-            .portfolio-item {
-                width: 100%;
+        .portfolio-item {
+            width: 100%;
             padding: 10px;
             background-color: azure;
             text-decoration: none;
             color: black;
-    
-                img {
-                    object-fit: cover;
-                }
 
-                a {
-                    text-decoration: none;
-                    color: black;
+            img {
+                object-fit: cover;
+            }
 
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-                p {
-                    text-wrap: wrap;
+            a {
+                text-decoration: none;
+                color: black;
+
+                &:hover {
+                    text-decoration: underline;
                 }
             }
+            
+            p {
+                text-wrap: wrap;
+            }
+        }
     
         .category-filter {
             display: flex;
@@ -129,6 +130,8 @@ header {
     
             button {
                 width: 150px;
+                cursor: pointer;
+                padding: 5px;
             }
         }
         
@@ -147,14 +150,6 @@ header {
     .container {
         background-color: azure;
         padding: 10px;
-        position: relative;
-
-
-        h2 {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
 
         img {
             object-fit: cover;
@@ -207,13 +202,70 @@ header {
     .container {
         padding: 10px;
         background-color: azure;
+        position: relative;
 
         img {
             object-fit: cover;
         }
+
+        h2 {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
     }
 }
 
+.contact {
+    padding: 10px;
+
+    .container {
+        padding: 10px;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            background-color: azure;
+            padding: 10px;
+            gap: 20px;
+
+            section {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+
+                form {
+                    div {
+                        display: flex;
+                        place-items: center;
+                        justify-content: space-between;
+
+                        input {
+                            margin: 5px;
+                            padding: 10px;
+                        }
+
+                        textarea {
+                            padding: 10px;
+                            margin: 5px;
+                        }
+                        
+                    }
+
+                    button {
+                        padding: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
 
 footer {
     display: flex;
@@ -230,6 +282,7 @@ footer {
         .social-links {
             a {
                 margin: 5px;
+                color: black;
     
                 svg {
                     font-size: 25px;
