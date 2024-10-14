@@ -1,5 +1,6 @@
 // src/pages/ContactPage.tsx
 import React from 'react';
+import {Helmet} from "react-helmet";
 import ContactForm from './ContactForm';
 import AppointmentBooking from './AppointmentBooking';
 
@@ -18,6 +19,11 @@ const Contact: React.FC = () => {
 
   return (
     <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
     <div className='contact'>
       <div className="container">
         <h2>Contact Us</h2>
