@@ -66,6 +66,10 @@ header .nav2 .burger svg {
   cursor: pointer;
 }
 
+.home .hero {
+  height: 100vh;
+}
+
 .about {
   padding: 10px;
 }
@@ -129,6 +133,11 @@ header .nav2 .burger svg {
   width: 150px;
   cursor: pointer;
   padding: 5px;
+}
+@media (max-width: 768px) {
+  .portfolio .container .category-filter button {
+    width: 150px;
+  }
 }
 .portfolio .container .portfolio-list {
   display: grid;
@@ -214,8 +223,6 @@ header .nav2 .burger svg {
 .contact .container .wrapper {
   display: flex;
   justify-content: space-between;
-  background-color: azure;
-  padding: 10px;
   gap: 20px;
 }
 .contact .container .wrapper section {
@@ -223,6 +230,8 @@ header .nav2 .burger svg {
   flex-direction: column;
   gap: 10px;
   width: 100%;
+  background-color: azure;
+  padding: 10px;
 }
 .contact .container .wrapper section form div {
   display: flex;

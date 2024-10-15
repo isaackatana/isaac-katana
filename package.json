@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "front": "npm run dev --prefix front",
-    "back": "nodemon back/index.js",
-    "dev": "node index.js"
+    "back": "nodemon back/src/index.ts",
+    "dev": "node index.ts"
   },
   "keywords": [],
   "author": "",

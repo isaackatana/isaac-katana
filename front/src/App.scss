@@ -92,6 +92,12 @@ header {
     }
 }
 
+.home {
+    .hero {
+        height: 100vh;
+    }
+}
+
 .about {
     padding: 10px;
 
@@ -168,6 +174,14 @@ header {
                 width: 150px;
                 cursor: pointer;
                 padding: 5px;
+
+                @include respond-to(mobile) {
+                    width: 150px;
+                }
+                
+                @include respond-to(tablet) {
+                    // flex-direction: column;
+                }
             }
         }
         
@@ -274,8 +288,6 @@ header {
         .wrapper {
             display: flex;
             justify-content: space-between;
-            background-color: azure;
-            padding: 10px;
             gap: 20px;
 
             section {
@@ -283,6 +295,8 @@ header {
                 flex-direction: column;
                 gap: 10px;
                 width: 100%;
+                background-color: azure;
+                padding: 10px;
 
                 form {
                     div {

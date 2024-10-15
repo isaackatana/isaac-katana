@@ -1,11 +1,12 @@
 
+const heroImages= './images/isaac1.jpg'
 
 function Home() {
   return (
     <>
-    <div className="container">
+    <div className="home">
       <div className="hero">
-        <div>Home</div>
+        <img src={heroImages} alt="" />
       </div>
     </div>
     </>
