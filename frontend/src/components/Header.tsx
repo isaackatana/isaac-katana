@@ -16,6 +16,7 @@ function Header() {
       <div className="logo">
         <Link to='/'>Logo</Link>
       </div>
+      
       <nav>
           <ul className={`nav-links ${isMenuOpen ? 'active' : 'inactive'}`}>
             <li><NavLink to="/">Home</NavLink></li>
@@ -27,11 +28,11 @@ function Header() {
       </nav>
       
       <div className="nav2">
-        <div className="social-links">
-          <FaGithub/>
-          <FaLinkedinIn/>
-          <FaXTwitter/>
-        </div>
+      <div className="social-links">
+        <a href="https://github.com/isaackatana" target="_blank" rel="noopener noreferrer"><FaGithub/></a>
+        <a href="https://linkedin.com/in/isaackatana" target="_blank" rel="noopener noreferrer"><FaLinkedinIn/></a>
+        <a href="https://twitter.com/1isaackatana" target="_blank" rel="noopener noreferrer"><FaXTwitter/></a>
+      </div>
 
         <div className="burger">
           

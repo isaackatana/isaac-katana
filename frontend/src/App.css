@@ -63,6 +63,7 @@ header .nav2 .social-links svg {
   font-size: 25px;
   margin: 5px;
   cursor: pointer;
+  color: black;
 }
 header .nav2 .burger {
   display: none;

@@ -75,6 +75,7 @@ header {
     .nav2 {
         display: flex;
         justify-content: end;
+
         .social-links {
             display: flex;
             place-items: center;
@@ -83,6 +84,7 @@ header {
                 font-size: 25px;
                 margin: 5px;
                 cursor: pointer;
+                color: black;
             }
         }
 

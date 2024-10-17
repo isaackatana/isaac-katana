@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
     </Helmet>
     <div className='contact'>
       <div className="container">
-        <h2>Contact Us</h2>
+        <h2>Contact me</h2>
         <div className="wrapper">
           <section>
             <h3>Send a Message</h3>
