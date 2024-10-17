@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { portfolioItems } from './PortfolioData';
 import PortfolioList from './PortfolioList';
 import CategoryFilter from './CategoryFilter';
+import { Helmet } from 'react-helmet';
 
 const Portfolio: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -14,6 +15,12 @@ const Portfolio: React.FC = () => {
     : portfolioItems.filter(item => item.category === selectedCategory);
 
   return (
+    <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Isaac's Portfolio</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
     <div className='portfolio'>
       <div className="container">
         <h2>Portfolio</h2>
@@ -25,6 +32,7 @@ const Portfolio: React.FC = () => {
         <PortfolioList items={filteredItems} />
       </div>
     </div>
+    </>
   );
 };
 

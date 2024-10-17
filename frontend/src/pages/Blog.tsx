@@ -6,7 +6,7 @@ function Blog() {
   return (
     <>
     <Helmet>
-      <title>Blog</title>
+      <title>Isaac's Blog</title>
       <meta name="description" content="Get in touch with us through our contact page." />
       <meta property="og:title" content="Blog | Tech news and Weekly Tutorials" />
       <meta property="og:description" content="Tech news and Weekly Tutorials" />

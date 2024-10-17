@@ -1,8 +1,15 @@
 // src/pages/AboutPage.tsx
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const About: React.FC = () => {
   return (
+    <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>About Isaac</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
     <div className="about">
       <div className="container">
       <h2>About</h2>
@@ -51,6 +58,7 @@ const About: React.FC = () => {
       </div>
       </div>
     </div>
+    </>
   );
 };
 

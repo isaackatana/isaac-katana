@@ -1,8 +1,15 @@
+import { useState } from 'react';
 import { FaBars, FaGithub, FaLinkedinIn } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
+import { FaXmark, FaXTwitter } from 'react-icons/fa6'
 import { Link, NavLink } from 'react-router-dom'
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
     <header className="header">
@@ -10,13 +17,13 @@ function Header() {
         <Link to='/'>Logo</Link>
       </div>
       <nav>
-        <ul className="nav-links">
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/portfolio">Portfolio</NavLink></li>
-          <li><NavLink to="/blog">Blog</NavLink></li>
-          <li><NavLink to="/contact">Contact</NavLink></li>
-        </ul>
+          <ul className={`nav-links ${isMenuOpen ? 'active' : 'inactive'}`}>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/portfolio">Portfolio</NavLink></li>
+            <li><NavLink to="/blog">Blog</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
+          </ul>
       </nav>
       
       <div className="nav2">
@@ -27,7 +34,9 @@ function Header() {
         </div>
 
         <div className="burger">
-          <FaBars/>
+          
+          
+          {isMenuOpen ? <FaXmark onClick={toggleMenu}/> : <FaBars onClick={toggleMenu}/>}
         </div>
       </div>
     </header>

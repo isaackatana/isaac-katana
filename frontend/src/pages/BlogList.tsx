@@ -14,7 +14,7 @@ const BlogList: React.FC<BlogListProps> = ({ posts }) => {
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <img src={post.imageUrl} style={{ width: '100%', height: '300px' }} alt={post.title} />
+            <img src={post.imageUrl} alt={post.title} />
             <Link to={`/blog/${post.slug}`}>
               <h3>{post.title}</h3>
             </Link>

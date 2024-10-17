@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
     <>
     <Helmet>
         <meta charSet="utf-8" />
-        <title>Contact</title>
+        <title>Contact Isaac</title>
         <link rel="canonical" href="http://mysite.com/example" />
     </Helmet>
     <div className='contact'>
