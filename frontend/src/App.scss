@@ -10,6 +10,8 @@
     }
 }
 
+@import './styles/colors';
+
 body {
     background-color: rgb(233, 233, 233);
 }
@@ -21,7 +23,9 @@ header {
     padding: 20px;
     position: sticky;
     top: 0;
-    background-color: azure;
+    background-color: $dark-gray;
+    color: $white;
+    
 
     nav {
         display: flex;
@@ -39,7 +43,7 @@ header {
                 position: fixed;
                 top: 75px;
                 display: flex;
-                background-color: azure;
+                background-color: $dark-gray;
                 padding: 20px;
             }
             
@@ -52,7 +56,7 @@ header {
 
             a {
                 text-decoration: none;
-                color: black;
+                color: $white;
 
                 &:hover {
                     text-decoration: underline;
@@ -84,7 +88,7 @@ header {
                 font-size: 25px;
                 margin: 5px;
                 cursor: pointer;
-                color: black;
+                color: $white;
             }
         }
 
@@ -115,6 +119,11 @@ header {
 
 .about {
     padding: 10px;
+    color: $white;
+
+    h2 {
+        color: $black;
+    }
 
     .container {
         padding: 10px;
@@ -140,8 +149,12 @@ header {
                 }
 
                 .about-section{
-                    background-color: azure;
+                    background-color: $dark-gray;
                     padding: 10px;
+
+                    a {
+                        color: $white
+                    }
                 }
             }
         }
@@ -161,9 +174,9 @@ header {
         .portfolio-item {
             width: 100%;
             padding: 10px;
-            background-color: azure;
+            background-color: $dark-gray;
             text-decoration: none;
-            color: black;
+            color: $white;
 
             img {
                 object-fit: cover;
@@ -171,7 +184,7 @@ header {
 
             a {
                 text-decoration: none;
-                color: black;
+                color: $white;
 
                 &:hover {
                     text-decoration: underline;
@@ -223,7 +236,7 @@ header {
     padding: 10px;
 
     .container {
-        background-color: azure;
+        background-color: $dark-gray;
         padding: 10px;
 
         img {
@@ -235,6 +248,7 @@ header {
 
 .blog {
     padding: 10px;
+    color: $white;
 
     h2 {
         margin-bottom: 10px;
@@ -243,13 +257,17 @@ header {
     .container {
         padding: 10px;
 
+        h2 {
+            color: $black;
+        }
+
         ul {
             display: flex;
             flex-direction: column;
             gap: 10px;
 
             li {
-                background-color: azure;
+                background-color: $dark-gray;
                 padding: 10px;
                 list-style: none;
                 width: 700px;
@@ -270,7 +288,7 @@ header {
 
                 a {
                     text-decoration: none;
-                    color: black;
+                    color: $white;
 
                     &:hover {
                         text-decoration: underline;
@@ -286,7 +304,7 @@ header {
     
     .container {
         padding: 10px;
-        background-color: azure;
+        background-color: $dark-gray;
         position: relative;
 
         img {
@@ -297,12 +315,14 @@ header {
 
 .contact {
     padding: 10px;
+    color: $white;
 
     .container {
         padding: 10px;
 
         h2 {
             margin-bottom: 10px;
+            color: $black
         }
 
         .wrapper {
@@ -319,7 +339,7 @@ header {
                 flex-direction: column;
                 gap: 10px;
                 width: 100%;
-                background-color: azure;
+                background-color: $dark-gray;
                 padding: 10px;
 
                 form {
@@ -355,7 +375,8 @@ footer {
     justify-content: center;
     text-align: center;
     padding: 20px;
-    background-color: azure;
+    background-color: $dark-gray;
+    color: $white;
 
     .footer-content {
 
@@ -366,7 +387,7 @@ footer {
         .social-links {
             a {
                 margin: 5px;
-                color: black;
+                color: $white;
     
                 svg {
                     font-size: 25px;

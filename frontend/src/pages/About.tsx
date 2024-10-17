@@ -19,7 +19,7 @@ const About: React.FC = () => {
         </div> */}
         <div className="detail">
           <section className="about-section">
-              <h2>Filmmaker</h2>
+              <h3>Filmmaker</h3>
               <p>
                 With a deep passion for visual storytelling, I have directed and produced multiple short films, music videos, and documentaries. My work is characterized by a focus on emotion, atmosphere, and immersive storytelling. I thrive in both collaborative environments and solo projects, bringing creative visions to life through the lens.
               </p>
@@ -29,7 +29,7 @@ const About: React.FC = () => {
           </section>
 
           <section className="about-section">
-            <h2>Audio Engineer</h2>
+            <h3>Audio Engineer</h3>
             <p>
               As an audio engineer, I have a keen ear for detail and a passion for high-quality sound. I have worked on recording, mixing, and mastering for a variety of projects, including music albums, podcasts, and soundtracks for films.
             </p>
@@ -39,7 +39,7 @@ const About: React.FC = () => {
           </section>
 
           <section className="about-section">
-            <h2>Web Developer</h2>
+            <h3>Web Developer</h3>
             <p>
               As a web developer, I enjoy crafting intuitive, responsive, and user-friendly websites using modern technologies like React, TypeScript, and Node.js. With a background in both front-end and back-end development, I am skilled in building full-stack applications that are not only functional but also visually appealing.
             </p>
@@ -49,7 +49,7 @@ const About: React.FC = () => {
           </section>
 
           <section className="about-section">
-            <h2>Let's Connect</h2>
+            <h3>Let's Connect</h3>
             <p>
               Whether it's creating engaging visual content, crafting immersive audio experiences, or developing robust web applications, I am always excited to take on new challenges. Feel free to reach out to me through the <a href="/contact">Contact Page</a> to discuss potential projects or collaborations.
             </p>

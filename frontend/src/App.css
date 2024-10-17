@@ -9,7 +9,8 @@ header {
   padding: 20px;
   position: sticky;
   top: 0;
-  background-color: azure;
+  background-color: #2E2E2E;
+  color: #FFFFFF;
 }
 header nav {
   display: flex;
@@ -28,7 +29,7 @@ header nav .nav-links {
     position: fixed;
     top: 75px;
     display: flex;
-    background-color: azure;
+    background-color: #2E2E2E;
     padding: 20px;
   }
 }
@@ -37,7 +38,7 @@ header nav .nav-links li {
 }
 header nav .nav-links li a {
   text-decoration: none;
-  color: black;
+  color: #FFFFFF;
 }
 header nav .nav-links li a:hover {
   text-decoration: underline;
@@ -63,7 +64,7 @@ header .nav2 .social-links svg {
   font-size: 25px;
   margin: 5px;
   cursor: pointer;
-  color: black;
+  color: #FFFFFF;
 }
 header .nav2 .burger {
   display: none;
@@ -85,6 +86,10 @@ header .nav2 .burger svg {
 
 .about {
   padding: 10px;
+  color: #FFFFFF;
+}
+.about h2 {
+  color: #000000;
 }
 .about .container {
   padding: 10px;
@@ -107,8 +112,11 @@ header .nav2 .burger svg {
   }
 }
 .about .container .wrapper .detail .about-section {
-  background-color: azure;
+  background-color: #2E2E2E;
   padding: 10px;
+}
+.about .container .wrapper .detail .about-section a {
+  color: #FFFFFF;
 }
 
 .portfolio {
@@ -123,9 +131,9 @@ header .nav2 .burger svg {
 .portfolio .container .portfolio-item {
   width: 100%;
   padding: 10px;
-  background-color: azure;
+  background-color: #2E2E2E;
   text-decoration: none;
-  color: black;
+  color: #FFFFFF;
 }
 .portfolio .container .portfolio-item img {
   -o-object-fit: cover;
@@ -133,7 +141,7 @@ header .nav2 .burger svg {
 }
 .portfolio .container .portfolio-item a {
   text-decoration: none;
-  color: black;
+  color: #FFFFFF;
 }
 .portfolio .container .portfolio-item a:hover {
   text-decoration: underline;
@@ -170,7 +178,7 @@ header .nav2 .burger svg {
   padding: 10px;
 }
 .portfolio-detail .container {
-  background-color: azure;
+  background-color: #2E2E2E;
   padding: 10px;
 }
 .portfolio-detail .container img {
@@ -180,6 +188,7 @@ header .nav2 .burger svg {
 
 .blog {
   padding: 10px;
+  color: #FFFFFF;
 }
 .blog h2 {
   margin-bottom: 10px;
@@ -187,13 +196,16 @@ header .nav2 .burger svg {
 .blog .container {
   padding: 10px;
 }
+.blog .container h2 {
+  color: #000000;
+}
 .blog .container ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 .blog .container ul li {
-  background-color: azure;
+  background-color: #2E2E2E;
   padding: 10px;
   list-style: none;
   width: 700px;
@@ -211,7 +223,7 @@ header .nav2 .burger svg {
 }
 .blog .container ul li a {
   text-decoration: none;
-  color: black;
+  color: #FFFFFF;
 }
 .blog .container ul li a:hover {
   text-decoration: underline;
@@ -222,7 +234,7 @@ header .nav2 .burger svg {
 }
 .blog-detail .container {
   padding: 10px;
-  background-color: azure;
+  background-color: #2E2E2E;
   position: relative;
 }
 .blog-detail .container img {
@@ -232,12 +244,14 @@ header .nav2 .burger svg {
 
 .contact {
   padding: 10px;
+  color: #FFFFFF;
 }
 .contact .container {
   padding: 10px;
 }
 .contact .container h2 {
   margin-bottom: 10px;
+  color: #000000;
 }
 .contact .container .wrapper {
   display: flex;
@@ -254,7 +268,7 @@ header .nav2 .burger svg {
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  background-color: azure;
+  background-color: #2E2E2E;
   padding: 10px;
 }
 .contact .container .wrapper section form div {
@@ -280,14 +294,15 @@ footer {
   justify-content: center;
   text-align: center;
   padding: 20px;
-  background-color: azure;
+  background-color: #2E2E2E;
+  color: #FFFFFF;
 }
 footer .footer-content p {
   margin-bottom: 5px;
 }
 footer .footer-content .social-links a {
   margin: 5px;
-  color: black;
+  color: #FFFFFF;
 }
 footer .footer-content .social-links a svg {
   font-size: 25px;
