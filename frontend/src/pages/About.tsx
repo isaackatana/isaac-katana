@@ -7,7 +7,7 @@ const About: React.FC = () => {
     <>
     <Helmet>
         <meta charSet="utf-8" />
-        <title>About Isaac</title>
+        <title>Isaac's Profile</title>
         <link rel="canonical" href="http://mysite.com/example" />
     </Helmet>
     <div className="about">
