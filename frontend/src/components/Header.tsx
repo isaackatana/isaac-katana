@@ -3,6 +3,8 @@ import { FaBars, FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { FaXmark, FaXTwitter } from 'react-icons/fa6'
 import { Link, NavLink } from 'react-router-dom'
 
+import Logo from '../assets/logo.png'
+
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
@@ -14,7 +16,7 @@ function Header() {
     <>
     <header className="header">
       <div className="logo">
-        <Link to='/'>Logo</Link>
+        <Link to='/'><img src={Logo} alt="" /></Link>
       </div>
       
       <nav>
