@@ -1,18 +1,50 @@
 // src/components/BlogList.tsx
-import React from 'react';
-import { Blog } from './BlogData';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-interface BlogListProps {
-  posts: Blog[];
+interface Blog {
+  id: number;
+  imageUrl: string;
+  title: string;
+  content: string;
+  author: string;
+  date: string;
+  slug: string;
 }
+const BlogList: React.FC = () => {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
-const BlogList: React.FC<BlogListProps> = ({ posts }) => {
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get<Blog[]>('http://localhost:5000/api/blogs');
+        setBlogs(response.data);
+      } catch (error: unknown) {
+        setError('Error fetching blog posts');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
   return (
     <div className='container'>
       <h2>Blog</h2>
       <ul>
-        {posts.map((post) => (
+        {blogs.map((post) => (
           <li key={post.id}>
             <img src={post.imageUrl} alt={post.title} />
             <Link to={`/blog/${post.slug}`}>

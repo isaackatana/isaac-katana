@@ -1,13 +1,21 @@
 // src/components/BlogPost.tsx
 import React from 'react';
-import { Blog } from './BlogData';
+import { Helmet } from 'react-helmet';
+
+interface Blog {
+  id: number;
+  imageUrl: string;
+  title: string;
+  content: string;
+  author: string;
+  date: string;
+  slug: string;
+}
+
 interface BlogPostProps {
   post: Blog;
 }
-import { Helmet } from 'react-helmet';
-
-
-const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
+const BlogPost: React.FC <BlogPostProps> = ({ post }) => {
   return (
 
     <>

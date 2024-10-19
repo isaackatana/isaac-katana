@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet"
-import { blogPosts } from "./BlogData"
 import BlogList from "./BlogList"
 
 function Blog() {
@@ -16,7 +15,7 @@ function Blog() {
       <meta name="twitter:image" content="https://example.com/your-thumbnail-image.jpg" />
     </Helmet>
     <div className="blog">
-      <BlogList posts={blogPosts} />
+      <BlogList />
     </div>
     </>
   )

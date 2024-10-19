@@ -119,11 +119,15 @@ header {
     }
 }
 
+// Home
+
 .home {
     .hero {
         height: 100vh;
     }
 }
+
+// About
 
 .about {
     padding: 10px;
@@ -254,6 +258,8 @@ header {
 
 }
 
+// Blog
+
 .blog {
     padding: 10px;
     color: $white;
@@ -320,6 +326,8 @@ header {
         }
     }
 }
+
+// Contact
 
 .contact {
     padding: 10px;
