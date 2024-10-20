@@ -30,11 +30,14 @@ header {
     .logo {
         width: 70px;
 
+        @include respond-to(mobile){
+            width: 50px;
+        }
+
         img {
             width: 100%;
         }
     }
-    
 
     nav {
         display: flex;
@@ -111,6 +114,7 @@ header {
             @include respond-to(tablet) {
                 // flex-direction: column;
             }
+
             svg {
                 font-size: 25px;
                 margin: 5px;
@@ -124,7 +128,7 @@ header {
 
 .home {
     .hero {
-        height: 400px;
+        height: 100vh;
 
         .wrapper {
             position: absolute;
