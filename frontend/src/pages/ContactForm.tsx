@@ -28,6 +28,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+          placeholder='Name'
         />
       </div>
       <div>
@@ -38,6 +39,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          placeholder='Email'
         />
       </div>
       <div>
@@ -47,6 +49,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
+          placeholder='Message'
         />
       </div>
       <button type="submit">Send Message</button>

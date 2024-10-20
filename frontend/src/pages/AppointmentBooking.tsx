@@ -28,6 +28,7 @@ const AppointmentBooking: React.FC<AppointmentBookingProps> = ({ onBook }) => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+          placeholder='Name'
         />
       </div>
       <div>

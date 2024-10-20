@@ -113,7 +113,8 @@ header .nav2 .burger svg {
   color: #FFFFFF;
 }
 .about h2 {
-  color: #000000;
+  margin-bottom: 10px;
+  color: #2E2E2E;
 }
 .about .container {
   padding: 10px;
@@ -153,6 +154,7 @@ header .nav2 .burger svg {
 }
 .portfolio .container h2 {
   margin-bottom: 10px;
+  color: #2E2E2E;
 }
 .portfolio .container .portfolio-item {
   width: 100%;
@@ -218,14 +220,12 @@ header .nav2 .burger svg {
   padding: 10px;
   color: #FFFFFF;
 }
-.blog h2 {
-  margin-bottom: 10px;
-}
 .blog .container {
   padding: 10px;
 }
 .blog .container h2 {
-  color: #000000;
+  margin-bottom: 10px;
+  color: #2E2E2E;
 }
 .blog .container ul {
   display: flex;
@@ -281,11 +281,10 @@ header .nav2 .burger svg {
 }
 .contact .container h2 {
   margin-bottom: 10px;
-  color: #000000;
+  color: #2E2E2E;
 }
 .contact .container .wrapper {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
 }
 @media (max-width: 768px) {
@@ -301,21 +300,24 @@ header .nav2 .burger svg {
   background-color: #2E2E2E;
   padding: 10px;
   border-radius: 10px;
+  width: 300px;
+}
+.contact .container .wrapper section form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .contact .container .wrapper section form div {
   display: flex;
-  place-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 }
 .contact .container .wrapper section form div input {
-  margin: 5px;
   padding: 10px;
   border-radius: 5px;
   border: none;
 }
 .contact .container .wrapper section form div textarea {
   padding: 10px;
-  margin: 5px;
   border-radius: 5px;
   border: none;
   width: 100%;
