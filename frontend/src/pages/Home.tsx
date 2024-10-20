@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet"
-const heroImages= './images/isaac1.jpg'
+const heroImages = './images/isaac1.jpg'
 
 function Home() {
   return (
