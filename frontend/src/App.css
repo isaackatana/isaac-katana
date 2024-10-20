@@ -281,6 +281,7 @@ header .nav2 .burger svg {
   width: 100%;
   background-color: #2E2E2E;
   padding: 10px;
+  border-radius: 10px;
 }
 .contact .container .wrapper section form div {
   display: flex;
@@ -290,10 +291,15 @@ header .nav2 .burger svg {
 .contact .container .wrapper section form div input {
   margin: 5px;
   padding: 10px;
+  border-radius: 5px;
+  border: none;
 }
 .contact .container .wrapper section form div textarea {
   padding: 10px;
   margin: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
 }
 .contact .container .wrapper section form button {
   padding: 10px;
