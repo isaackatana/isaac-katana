@@ -194,9 +194,19 @@ header .nav2 .burger svg {
     width: 150px;
   }
 }
+.portfolio .container .category-filter button:hover {
+  background-color: #2E2E2E;
+  color: #FFFFFF;
+  border: none;
+}
+.portfolio .container .category-filter .active {
+  background-color: #2E2E2E;
+  border: none;
+  color: #FFFFFF;
+}
 .portfolio .container .portfolio-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 5px;
 }
 @media (max-width: 768px) {

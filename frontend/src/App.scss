@@ -250,12 +250,25 @@ header {
                 @include respond-to(tablet) {
                     // flex-direction: column;
                 }
+
+                &:hover {
+                    background-color: $dark-gray;
+                    color: $white;
+                    border: none;
+                }
+            }
+
+            .active {
+                background-color: $dark-gray;
+                border: none;
+                color: $white;
+                
             }
         }
         
         .portfolio-list {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 5px;
 
             @include respond-to(mobile) {
