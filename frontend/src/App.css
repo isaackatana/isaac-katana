@@ -312,6 +312,11 @@ header .nav2 .burger svg {
   border-radius: 10px;
   width: 300px;
 }
+@media (max-width: 768px) {
+  .contact .container .wrapper section {
+    width: 100%;
+  }
+}
 .contact .container .wrapper section form {
   display: flex;
   flex-direction: column;

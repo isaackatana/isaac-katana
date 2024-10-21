@@ -28,7 +28,7 @@ const Portfolio: React.FC = () => {
     </Helmet>
     <div className='portfolio'>
       <div className="container">
-        <h2>Portfolio</h2>
+        <h2>My Portfolio</h2>
         <CategoryFilter
           categories={categories}
           selectedCategory={selectedCategory}

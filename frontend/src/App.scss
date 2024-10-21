@@ -262,7 +262,6 @@ header {
                 background-color: $dark-gray;
                 border: none;
                 color: $white;
-                
             }
         }
         
@@ -395,6 +394,10 @@ header {
                 padding: 10px;
                 border-radius: 10px;
                 width: 300px;
+
+                @include respond-to(mobile){
+                width: 100%;
+                }
 
                 form {
                     display: flex;

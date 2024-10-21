@@ -42,7 +42,7 @@ const BlogList: React.FC = () => {
 
   return (
     <div className='container'>
-      <h2>Blog</h2>
+      <h2>My Blog</h2>
       <ul>
         {blogs.map((post) => (
           <li key={post.id}>
