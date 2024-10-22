@@ -1,18 +1,14 @@
 import { Router, Request, Response } from 'express';
-import { blogPosts } from './BlogData';
 
 const blogRoutes = Router();
 
-blogRoutes.get('/', async (req: Request, res: Response) => {
+blogRoutes.get('/blogs', async (req: Request, res: Response) => {
   try {
-    res.status(200).json(blogPosts);
-  } catch (error: unknown) {
-    if (error instanceof Error) {
-      res.status(500).json({ message: error.message });
-    } else {
-      res.status(500).json({ message: 'An unknown error occurred.' });
-    }
+    // Fetch your blogs here and return them in the response
+    res.json({ message: 'Blogs fetched successfully' });
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching blogs' });
   }
 });
 
-export default blogRoutes; 
+export default blogRoutes;

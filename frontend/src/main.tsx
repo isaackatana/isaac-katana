@@ -29,12 +29,12 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/portfolio/:slug",
-        element: <PortfolioDetail />,
-      },
-      {
         path: "/portfolio",
         element: <Portfolio />,
+      },
+      {
+        path: "/portfolio/:slug",
+        element: <PortfolioDetail />,
       },
       {
         path: "/blog",
