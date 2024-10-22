@@ -17,7 +17,6 @@ interface BlogPostProps {
 }
 const BlogPost: React.FC <BlogPostProps> = ({ post }) => {
   return (
-
     <>
     <Helmet>
       <title>{post.title}</title>
