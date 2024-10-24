@@ -12,6 +12,7 @@ interface Blog {
   date: string;
   slug: string;
 }
+
 const BlogList: React.FC = () => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -22,7 +23,7 @@ const BlogList: React.FC = () => {
       try {
         const response = await axios.get<Blog[]>('http://localhost:5000/api/blogs');
         setBlogs(response.data);
-      } catch (error: unknown) {
+      } catch (error: unknown) { 
         setError('Error fetching blog posts');
       } finally {
         setLoading(false);
@@ -47,10 +48,12 @@ const BlogList: React.FC = () => {
         {blogs.map((post) => (
           <li key={post.id}>
             <img src={post.imageUrl} alt={post.title} />
-            <Link to={`/blog/${post.slug}`}>
-              <h3>{post.title}</h3>
-            </Link>
-            <p>by {post.author} on {post.date}</p>
+            <div className="info">
+              <Link to={`/blog/${post.slug}`}>
+                <h3>{post.title}</h3>
+              </Link>
+              <p>by {post.author} on {post.date}</p>
+            </div>
           </li>
         ))}
       </ul>

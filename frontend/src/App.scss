@@ -213,23 +213,28 @@ header {
             text-decoration: none;
             color: $white;
             border-radius: 10px;
+            position: relative;
 
             img {
                 object-fit: cover;
                 border-radius: 10px;
             }
 
-            a {
-                text-decoration: none;
-                color: $white;
-
-                &:hover {
-                    text-decoration: underline;
+            .info {
+                position: fixed;
+                bottom: 10px;
+                a {
+                    text-decoration: none;
+                    color: $white;
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
-            }
-            
-            p {
-                text-wrap: wrap;
+                
+                p {
+                    text-wrap: wrap;
+                }
             }
         }
     
@@ -271,10 +276,7 @@ header {
             gap: 5px;
 
             @include respond-to(mobile) {
-            grid-template-columns: 1fr;
-            }
-            
-            @include respond-to(tablet) {
+                grid-template-columns: 1fr;
             }
         }
     

@@ -163,20 +163,25 @@ header .nav2 .burger svg {
   text-decoration: none;
   color: #FFFFFF;
   border-radius: 10px;
+  position: relative;
 }
 .portfolio .container .portfolio-item img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
 }
-.portfolio .container .portfolio-item a {
+.portfolio .container .portfolio-item .info {
+  position: fixed;
+  bottom: 10px;
+}
+.portfolio .container .portfolio-item .info a {
   text-decoration: none;
   color: #FFFFFF;
 }
-.portfolio .container .portfolio-item a:hover {
+.portfolio .container .portfolio-item .info a:hover {
   text-decoration: underline;
 }
-.portfolio .container .portfolio-item p {
+.portfolio .container .portfolio-item .info p {
   text-wrap: wrap;
 }
 .portfolio .container .category-filter {
@@ -214,6 +219,7 @@ header .nav2 .burger svg {
     grid-template-columns: 1fr;
   }
 }
+
 .portfolio-detail {
   padding: 10px;
 }
