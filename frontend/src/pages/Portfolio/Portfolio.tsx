@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { portfolioItems } from './PortfolioData';
 import PortfolioList from './PortfolioList';
-import CategoryFilter from './CategoryFilter';
+import CategoryFilter from '../CategoryFilter';
 import { Helmet } from 'react-helmet';
 
 const Portfolio: React.FC = () => {
