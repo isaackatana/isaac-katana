@@ -1,7 +1,6 @@
-// src/components/BlogList.tsx
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
+import BlogPost from './BlogPost';
 
 interface Blog {
   id: number;
@@ -21,9 +20,9 @@ const BlogList: React.FC = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get<Blog[]>('http://localhost:5000/api/blogs');
-        setBlogs(response.data);
-      } catch (error: unknown) { 
+        const response = await axios.get<{ message: string, data: Blog[] }>('http://localhost:5000/api/blogs');
+        setBlogs(response.data.data); // Access the 'data' field
+      } catch (error: unknown) {
         setError('Error fetching blog posts');
       } finally {
         setLoading(false);
@@ -47,13 +46,7 @@ const BlogList: React.FC = () => {
       <ul>
         {blogs.map((post) => (
           <li key={post.id}>
-            <img src={post.imageUrl} alt={post.title} />
-            <div className="info">
-              <Link to={`/blog/${post.slug}`}>
-                <h3>{post.title}</h3>
-              </Link>
-              <p>by {post.author} on {post.date}</p>
-            </div>
+            <BlogPost post={post} />
           </li>
         ))}
       </ul>
