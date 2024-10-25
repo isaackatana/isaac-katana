@@ -124,13 +124,14 @@ header .nav2 .burger svg {
 }
 .about .container .wrapper {
   display: flex;
+  justify-content: center;
   gap: 5px;
 }
 .about .container .wrapper .detail {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
-  width: 400px;
+  width: 80%;
 }
 @media (max-width: 768px) {
   .about .container .wrapper .detail {
@@ -158,30 +159,31 @@ header .nav2 .burger svg {
 }
 .portfolio .container .portfolio-item {
   width: 100%;
-  padding: 10px;
   background-color: #2E2E2E;
   text-decoration: none;
   color: #FFFFFF;
-  border-radius: 10px;
   position: relative;
 }
 .portfolio .container .portfolio-item img {
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
+  width: 100%;
+  height: 300px;
 }
-.portfolio .container .portfolio-item .info {
-  position: fixed;
-  bottom: 10px;
+.portfolio .container .portfolio-item .item-info {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  background-color: #2E2E2E;
 }
-.portfolio .container .portfolio-item .info a {
+.portfolio .container .portfolio-item .item-info a {
   text-decoration: none;
   color: #FFFFFF;
 }
-.portfolio .container .portfolio-item .info a:hover {
+.portfolio .container .portfolio-item .item-info a:hover {
   text-decoration: underline;
 }
-.portfolio .container .portfolio-item .info p {
+.portfolio .container .portfolio-item .item-info p {
   text-wrap: wrap;
 }
 .portfolio .container .category-filter {
@@ -230,6 +232,10 @@ header .nav2 .burger svg {
 .portfolio-detail .container img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+.portfolio-detail .container .item-detail {
+  color: #FFFFFF;
+  top: 0;
 }
 
 .blog {

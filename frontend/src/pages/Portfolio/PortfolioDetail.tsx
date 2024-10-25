@@ -19,9 +19,11 @@ const PortfolioDetail: React.FC = () => {
     <div className="portfolio-detail">
       <div className="container">
         <img src={portfolioItem.imageUrl} alt={portfolioItem.title} style={{ width: '100%', height: '60vh' }} />
-        <h2>{portfolioItem.title}</h2>
-        <p><strong>Category:</strong> {portfolioItem.category}</p>
-        <p>{portfolioItem.description}</p>
+        <div className="item-detail">
+          <h2>{portfolioItem.title}</h2>
+          <p><strong>Category:</strong> {portfolioItem.category}</p>
+          <p>{portfolioItem.description}</p>
+        </div>
       </div>
     </div>
   );

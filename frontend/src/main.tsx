@@ -8,7 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './pages/Home.tsx';
-import About from './pages/About.tsx';
+import About from './pages/About/About.tsx';
 import Portfolio from './pages/Portfolio/Portfolio.tsx';
 import Blog from './pages/Blog/Blog.tsx';
 import Contact from './pages/Contact.tsx';
@@ -39,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog />,
+      },
+      {
+        path: "/blog/:slug",
+        element: <BlogDetail />,
       },
       {
         path: "/contact",
