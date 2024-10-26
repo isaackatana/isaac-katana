@@ -12,11 +12,17 @@ interface Blog {
   slug: string;
 }
 
-interface BlogPostProps {
-  post: Blog;
-}
+const post = {
+  id: 1,
+  imageUrl: 'example.jpg',
+  title: 'Example Blog Title',
+  content: 'This is an example content',
+  author: 'Author Name',
+  date: '2023-10-25',
+  slug: 'example-blog-title',
+};
 
-const BlogPost: React.FC<BlogPostProps> = ({ post }) => {
+const BlogPost: React.FC = () => {
   return (
     <>
       <Helmet>
