@@ -190,18 +190,19 @@ header .nav2 .burger svg {
   display: flex;
   gap: 5px;
   margin-bottom: 10px;
+  overflow-y: hidden;
 }
-.portfolio .container .category-filter button {
+.portfolio .container .category-filter .wrapper button {
   width: 150px;
   cursor: pointer;
   padding: 5px;
 }
 @media (max-width: 768px) {
-  .portfolio .container .category-filter button {
-    width: 150px;
+  .portfolio .container .category-filter .wrapper button {
+    width: 140px;
   }
 }
-.portfolio .container .category-filter button:hover {
+.portfolio .container .category-filter .wrapper button:hover {
   background-color: #2E2E2E;
   color: #FFFFFF;
   border: none;

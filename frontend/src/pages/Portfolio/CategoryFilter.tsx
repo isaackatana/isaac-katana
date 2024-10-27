@@ -14,17 +14,21 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
 }) => {
   return (
     <div className="category-filter">
-      <button onClick={() => onCategoryChange('All')} className={selectedCategory === 'All' ? 'active' : ''}>
-        All
-      </button>
-      {categories.map((category) => (
-        <button
-          key={category}
-          onClick={() => onCategoryChange(category)}
-          className={selectedCategory === category ? 'active' : ''}
-        >
-          {category}
+      <div className="wrapper">
+        <button onClick={() => onCategoryChange('All')} className={selectedCategory === 'All' ? 'active' : ''}>
+          All
         </button>
+      </div>
+      {categories.map((category) => (
+        <div className="wrapper">
+          <button
+            key={category}
+            onClick={() => onCategoryChange(category)}
+            className={selectedCategory === category ? 'active' : ''}
+          >
+            {category}
+          </button>
+        </div>
       ))}
     </div>
   );

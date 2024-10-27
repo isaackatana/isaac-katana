@@ -247,14 +247,16 @@ header {
             display: flex;
             gap: 5px;
             margin-bottom: 10px;
+            overflow-y: hidden;
     
+        .wrapper {
             button {
                 width: 150px;
                 cursor: pointer;
                 padding: 5px;
 
                 @include respond-to(mobile) {
-                    width: 150px;
+                    width: 140px;
                 }
                 
                 @include respond-to(tablet) {
@@ -267,6 +269,7 @@ header {
                     border: none;
                 }
             }
+        }
 
             .active {
                 background-color: $dark-gray;
