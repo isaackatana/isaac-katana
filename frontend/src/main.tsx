@@ -14,11 +14,14 @@ import Portfolio from './pages/Portfolio/Portfolio.tsx';
 import Contact from './pages/Contact.tsx';
 
 import PortfolioDetail from './pages/Portfolio/PortfolioDetail.tsx';
+import NotFoundPage from './pages/NotFoundPage.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <NotFoundPage/>,
+
     children: [
       {
         path: "/",

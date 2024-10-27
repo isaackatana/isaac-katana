@@ -42,6 +42,14 @@ export interface PortfolioItem {
       category: "Graphic Design",
       imageUrl: "https://www.inexpanse.com/wp-content/uploads/2018/01/collage-of-logos-1024x640.jpg",
       slug: slugify("Logo Design", { lower: true })
+    },
+    {
+      id: 5,
+      title: "Video Editing",
+      description: "A set of logos designed for a startup company.",
+      category: "Video Editing",
+      imageUrl: "https://www.inexpanse.com/wp-content/uploads/2018/01/collage-of-logos-1024x640.jpg",
+      slug: slugify("Logo Design", { lower: true })
     }
     // Add more portfolio items as needed
   ];
