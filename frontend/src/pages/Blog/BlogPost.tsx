@@ -1,16 +1,8 @@
-// src/components/BlogPost.tsx
-interface Blog {
-  id: number;
-  imageUrl: string;
-  title: string;
-  content: string;
-  author: string;
-  date: string;
-  slug: string;
-}
+import { blogPost as blogPostType } from './BlogData';
 
+// src/components/BlogPost.tsx
 interface BlogPostProps {
-  post: Blog;
+  post: blogPostType;
 }
 
 const BlogPost: React.FC<BlogPostProps> = ({ post }) => {

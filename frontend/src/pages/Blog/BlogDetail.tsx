@@ -1,45 +1,38 @@
-// src/components/BlogPost.tsx
+// src/components/blogPost.tsx
 import React from 'react';
 import { Helmet } from 'react-helmet';
-
-interface Blog {
-  id: number;
-  imageUrl: string;
-  title: string;
-  content: string;
-  author: string;
-  date: string;
-  slug: string;
-}
-
-const post = {
-  id: 1,
-  imageUrl: 'example.jpg',
-  title: 'Example Blog Title',
-  content: 'This is an example content',
-  author: 'Author Name',
-  date: '2023-10-25',
-  slug: 'example-blog-title',
-};
+import { useParams } from 'react-router-dom';
+import {  blogPosts } from './BlogData';
+import { blogPost as blogPostType } from './BlogData';
 
 const BlogPost: React.FC = () => {
+  const { slug } = useParams<{ slug: string }>();
+
+  const blogPost: blogPostType | undefined = blogPosts.find(
+    (post) => post.slug === slug
+  );
+
+  if (!blogPost) {
+    return <p>Portfolio post not found!</p>;
+  }
+
   return (
     <>
       <Helmet>
-        <title>{post.title}</title>
-        <meta name="description" content={post.content.slice(0, 150)} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.content.slice(0, 150)} />
-        <meta property="og:image" content={post.imageUrl} />
-        <meta property="og:url" content={`https://example.com/blog/${post.slug}`} />
+        <title>{blogPost.title}</title>
+        <meta name="description" content={blogPost.content.slice(0, 150)} />
+        <meta property="og:title" content={blogPost.title} />
+        <meta property="og:description" content={blogPost.content.slice(0, 150)} />
+        <meta property="og:image" content={blogPost.imageUrl} />
+        <meta property="og:url" content={`https://example.com/blog/${blogPost.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={post.imageUrl} />
+        <meta name="twitter:image" content={blogPost.imageUrl} />
       </Helmet>
       <div>
-        <img src={post.imageUrl} style={{ width: '100%', height: '300px' }} alt={post.title} />
-        <h2>{post.title}</h2>
-        <p>by {post.author} on {post.date}</p>
-        <div>{post.content}</div>
+        <img src={blogPost.imageUrl} style={{ width: '100%', height: '300px' }} alt={blogPost.title} />
+        <h2>{blogPost.title}</h2>
+        <p>by {blogPost.author} on {blogPost.date}</p>
+        <div>{blogPost.content}</div>
       </div>
     </>
   );
