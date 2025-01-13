@@ -7,13 +7,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './pages/Home.tsx';
-import About from './pages/About.tsx';
-import Portfolio from './pages/Portfolio.tsx';
-import Blog from './pages/Blog.tsx';
 import Contact from './pages/Contact.tsx';
-import BlogDetail from './pages/BlogDetail.tsx';
-import PortfolioDetail from './pages/PortfolioDetail.tsx';
+import About from './pages/About/About.tsx';
+import NotFoundPage from './pages/NotFoundPage.tsx';
+import Home from './pages/Home.tsx';
+import Portfolio from './pages/Portfolio/Portfolio.tsx';
 
 const router = createBrowserRouter([
   {
@@ -33,14 +31,6 @@ const router = createBrowserRouter([
       {
         path: "/portfolio",
         element: <Portfolio />,
-      },
-      {
-        path: "/blog",
-        element: <Blog />,
-      },
-      {
-        path: "/blog/:slug",
-        element: <BlogDetail/>
       },
       {
         path: "/contact",
