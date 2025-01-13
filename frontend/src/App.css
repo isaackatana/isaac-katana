@@ -10,6 +10,18 @@ header {
   top: 0;
   background-color: #2E2E2E;
   color: #FFFFFF;
+  z-index: 1;
+}
+header .logo {
+  width: 70px;
+}
+@media (max-width: 768px) {
+  header .logo {
+    width: 50px;
+  }
+}
+header .logo img {
+  width: 100%;
 }
 header nav {
   display: flex;
@@ -88,13 +100,26 @@ header .nav2 .burger svg {
 .home .hero {
   height: 100vh;
 }
+.home .hero .wrapper {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.home .hero .active {
+  opacity: 1;
+}
 
 .about {
   padding: 10px;
   color: #FFFFFF;
 }
 .about h2 {
-  color: #000000;
+  margin-bottom: 10px;
+  color: #2E2E2E;
 }
 .about .container {
   padding: 10px;
@@ -104,12 +129,14 @@ header .nav2 .burger svg {
 }
 .about .container .wrapper {
   display: flex;
+  justify-content: center;
   gap: 5px;
 }
 .about .container .wrapper .detail {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
+  width: 80%;
 }
 @media (max-width: 768px) {
   .about .container .wrapper .detail {
@@ -119,6 +146,7 @@ header .nav2 .burger svg {
 .about .container .wrapper .detail .about-section {
   background-color: #2E2E2E;
   padding: 10px;
+  border-radius: 10px;
 }
 .about .container .wrapper .detail .about-section a {
   color: #FFFFFF;
@@ -132,37 +160,41 @@ header .nav2 .burger svg {
 }
 .portfolio .container h2 {
   margin-bottom: 10px;
+  color: #2E2E2E;
 }
 .portfolio .container .portfolio-item {
   width: 100%;
-  padding: 10px;
   background-color: #2E2E2E;
   text-decoration: none;
   color: #FFFFFF;
+  position: relative;
 }
 .portfolio .container .portfolio-item img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: 300px;
 }
-.portfolio .container .portfolio-item a {
+.portfolio .container .portfolio-item .item-info {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  background-color: #2E2E2E;
+}
+.portfolio .container .portfolio-item .item-info a {
   text-decoration: none;
   color: #FFFFFF;
 }
-.portfolio .container .portfolio-item a:hover {
+.portfolio .container .portfolio-item .item-info a:hover {
   text-decoration: underline;
 }
-.portfolio .container .portfolio-item p {
+.portfolio .container .portfolio-item .item-info p {
   text-wrap: wrap;
 }
 .portfolio .container .category-filter {
   display: flex;
   gap: 5px;
   margin-bottom: 10px;
-  overflow-x: scroll;
-}
-.portfolio .container .category-filter .wrapper {
-  display: flex;
-  gap: 3px;
 }
 .portfolio .container .category-filter .wrapper button {
   width: 150px;
@@ -170,13 +202,23 @@ header .nav2 .burger svg {
   padding: 5px;
 }
 @media (max-width: 768px) {
-  .portfolio .container .category-filter .wrapper button {
-    font-size: small;
+  .portfolio .container .category-filter button {
+    width: 150px;
   }
+}
+.portfolio .container .category-filter .wrapper button:hover {
+  background-color: #2E2E2E;
+  color: #FFFFFF;
+  border: none;
+}
+.portfolio .container .category-filter .active {
+  background-color: #2E2E2E;
+  border: none;
+  color: #FFFFFF;
 }
 .portfolio .container .portfolio-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 5px;
 }
 @media (max-width: 768px) {
@@ -184,6 +226,7 @@ header .nav2 .burger svg {
     grid-template-columns: 1fr;
   }
 }
+
 .portfolio-detail {
   padding: 10px;
 }
@@ -195,19 +238,21 @@ header .nav2 .burger svg {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.portfolio-detail .container .item-detail {
+  color: #FFFFFF;
+  top: 0;
+}
 
 .blog {
   padding: 10px;
   color: #FFFFFF;
 }
-.blog h2 {
-  margin-bottom: 10px;
-}
 .blog .container {
   padding: 10px;
 }
 .blog .container h2 {
-  color: #000000;
+  margin-bottom: 10px;
+  color: #2E2E2E;
 }
 .blog .container ul {
   display: flex;
@@ -219,6 +264,7 @@ header .nav2 .burger svg {
   padding: 10px;
   list-style: none;
   width: 700px;
+  border-radius: 10px;
 }
 @media (max-width: 768px) {
   .blog .container ul li {
@@ -230,6 +276,7 @@ header .nav2 .burger svg {
      object-fit: cover;
   width: 100%;
   height: 200px;
+  border-radius: 10px;
 }
 .blog .container ul li a {
   text-decoration: none;
@@ -261,11 +308,10 @@ header .nav2 .burger svg {
 }
 .contact .container h2 {
   margin-bottom: 10px;
-  color: #000000;
+  color: #2E2E2E;
 }
 .contact .container .wrapper {
   display: flex;
-  justify-content: space-between;
   gap: 20px;
 }
 @media (max-width: 768px) {
@@ -280,19 +326,33 @@ header .nav2 .burger svg {
   width: 100%;
   background-color: #2E2E2E;
   padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+}
+@media (max-width: 768px) {
+  .contact .container .wrapper section {
+    width: 100%;
+  }
+}
+.contact .container .wrapper section form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 .contact .container .wrapper section form div {
   display: flex;
-  place-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 }
 .contact .container .wrapper section form div input {
-  margin: 5px;
   padding: 10px;
+  border-radius: 5px;
+  border: none;
 }
 .contact .container .wrapper section form div textarea {
   padding: 10px;
-  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
 }
 .contact .container .wrapper section form button {
   padding: 10px;

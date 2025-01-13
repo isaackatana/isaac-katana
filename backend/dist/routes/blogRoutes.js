@@ -10,10 +10,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
+const BlogData_1 = require("./BlogData");
 const blogRoutes = (0, express_1.Router)();
 blogRoutes.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        // Your logic here
+        res.status(200).json(BlogData_1.blogPosts);
     }
     catch (error) {
         if (error instanceof Error) {

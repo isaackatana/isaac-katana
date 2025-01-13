@@ -24,7 +24,19 @@ header {
     top: 0;
     background-color: $dark-gray;
     color: $white;
-    
+    z-index: 1;
+
+    .logo {
+        width: 70px;
+
+        @include respond-to(mobile){
+            width: 50px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
 
     nav {
         display: flex;
@@ -109,6 +121,7 @@ header {
             @include respond-to(tablet) {
                 // flex-direction: column;
             }
+
             svg {
                 font-size: 25px;
                 margin: 5px;
@@ -118,18 +131,37 @@ header {
     }
 }
 
+// Home
+
 .home {
     .hero {
         height: 100vh;
+
+        .wrapper {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            background-size: cover;
+            background-position: center;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .active {
+            opacity: 1;
+        }
     }
 }
+
+// About
 
 .about {
     padding: 10px;
     color: $white;
 
     h2 {
-        color: $black;
+        margin-bottom: 10px;
+        color: $dark-gray
     }
 
     .container {
@@ -144,12 +176,14 @@ header {
         
         .wrapper {
             display: flex;
+            justify-content: center;
             gap: 5px;
             
             .detail {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr;
                 gap: 10px;
+                width: 80%;
 
                 @include respond-to(mobile){
                     grid-template-columns: 1fr;
@@ -158,6 +192,7 @@ header {
                 .about-section{
                     background-color: $dark-gray;
                     padding: 10px;
+                    border-radius: 10px;
 
                     a {
                         color: $white
@@ -169,6 +204,8 @@ header {
     }
 }
 
+// Portfolio
+
 .portfolio {
     padding: 10px;
 
@@ -177,30 +214,40 @@ header {
 
         h2 {
             margin-bottom: 10px;
+            color: $dark-gray
         }
 
         .portfolio-item {
             width: 100%;
-            padding: 10px;
             background-color: $dark-gray;
             text-decoration: none;
             color: $white;
+            position: relative;
 
             img {
                 object-fit: cover;
+                width: 100%;
+                height: 300px;
             }
 
-            a {
-                text-decoration: none;
-                color: $white;
+            .item-info {
+                position: absolute;
+                bottom: 0;
+                padding: 10px;
+                background-color: $dark-gray;
 
-                &:hover {
-                    text-decoration: underline;
+                a {
+                    text-decoration: none;
+                    color: $white;
+    
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
-            }
-            
-            p {
-                text-wrap: wrap;
+                
+                p {
+                    text-wrap: wrap;
+                }
             }
         }
     
@@ -208,38 +255,42 @@ header {
             display: flex;
             gap: 5px;
             margin-bottom: 10px;
-            overflow-x: scroll;
+    
+            button {
+                width: 150px;
+                cursor: pointer;
+                padding: 5px;
 
-    
-            .wrapper {
-                display: flex;
-                gap: 3px;
-                button {
+                @include respond-to(mobile) {
                     width: 150px;
-                    cursor: pointer;
-                    padding: 5px;
-    
-                    @include respond-to(mobile) {
-                        font-size: small;
-                    }
-                    
-                    @include respond-to(tablet) {
-                        // flex-direction: column;
-                    }
                 }
+                
+                @include respond-to(tablet) {
+                    // flex-direction: column;
+                }
+
+                &:hover {
+                    background-color: $dark-gray;
+                    color: $white;
+                    border: none;
+                }
+            }
+        }
+
+            .active {
+                background-color: $dark-gray;
+                border: none;
+                color: $white;
             }
         }
         
         .portfolio-list {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
             gap: 5px;
 
             @include respond-to(mobile) {
-            grid-template-columns: 1fr;
-            }
-            
-            @include respond-to(tablet) {
+                grid-template-columns: 1fr;
             }
         }
     
@@ -256,23 +307,25 @@ header {
         img {
             object-fit: cover;
         }
+
+        .item-detail {
+            color: $white;
+            top: 0;
+        }
     }
 
-}                   
+}
 
 .blog {
     padding: 10px;
     color: $white;
 
-    h2 {
-        margin-bottom: 10px;
-    }
-
     .container {
         padding: 10px;
 
         h2 {
-            color: $black;
+            margin-bottom: 10px;
+            color: $dark-gray
         }
 
         ul {
@@ -285,6 +338,7 @@ header {
                 padding: 10px;
                 list-style: none;
                 width: 700px;
+                border-radius: 10px;
 
                 @include respond-to(mobile) {
                     width: 100%;
@@ -298,6 +352,7 @@ header {
                     object-fit: cover;
                     width: 100%;
                     height: 200px;
+                    border-radius: 10px;
                 }
 
                 a {
@@ -327,6 +382,8 @@ header {
     }
 }
 
+// Contact
+
 .contact {
     padding: 10px;
     color: $white;
@@ -336,12 +393,11 @@ header {
 
         h2 {
             margin-bottom: 10px;
-            color: $black
+            color: $dark-gray
         }
 
         .wrapper {
             display: flex;
-            justify-content: space-between;
             gap: 20px;
 
             @include respond-to(mobile){
@@ -355,21 +411,33 @@ header {
                 width: 100%;
                 background-color: $dark-gray;
                 padding: 10px;
+                border-radius: 10px;
+                width: 300px;
+
+                @include respond-to(mobile){
+                width: 100%;
+                }
 
                 form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
                     div {
                         display: flex;
-                        place-items: center;
-                        justify-content: space-between;
+                        flex-direction: column;
 
                         input {
-                            margin: 5px;
                             padding: 10px;
+                            border-radius: 5px;
+                            border: none;
                         }
 
                         textarea {
                             padding: 10px;
-                            margin: 5px;
+                            border-radius: 5px;
+                            border: none;
+                            width: 100%;
                         }
                         
                     }
