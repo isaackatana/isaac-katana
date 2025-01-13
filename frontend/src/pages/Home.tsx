@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet"
 import About from "./About"
 import Portfolio from "./Portfolio"
-import Blog from "./Blog"
 import Contact from "./Contact"
 
 const heroImages= './images/isaac1.jpg'
@@ -20,8 +19,7 @@ function Home() {
       </div>
     </div>
     <About/>
-    <Portfolio/>
-    <Blog/>
+    <Portfolio/>s
     <Contact/>
     </>
   )

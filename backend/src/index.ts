@@ -18,7 +18,7 @@ app.use('/api/blogs', blogRoutes);
 
 // Start server and connect to database
 (async () => {
-    try {
+    try {       
         await connectToDatabase();
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);

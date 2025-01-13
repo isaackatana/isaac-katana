@@ -6,7 +6,6 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  padding: 20px;
   position: sticky;
   top: 0;
   background-color: #2E2E2E;
@@ -27,7 +26,7 @@ header nav .nav-links {
   header nav .nav-links {
     flex-direction: column;
     position: fixed;
-    top: 75px;
+    top: 35px;
     display: flex;
     background-color: #2E2E2E;
     padding: 20px;
@@ -39,6 +38,7 @@ header nav .nav-links li {
 header nav .nav-links li a {
   text-decoration: none;
   color: #FFFFFF;
+  font-weight: bold;
 }
 header nav .nav-links li a:hover {
   text-decoration: underline;
@@ -54,11 +54,16 @@ header nav .active {
 }
 header .nav2 {
   display: flex;
+  align-items: center;
   justify-content: end;
 }
 header .nav2 .social-links {
   display: flex;
   place-items: center;
+}
+header .nav2 .social-links a {
+  display: flex;
+  align-items: center;
 }
 header .nav2 .social-links svg {
   font-size: 25px;
@@ -153,15 +158,20 @@ header .nav2 .burger svg {
   display: flex;
   gap: 5px;
   margin-bottom: 10px;
+  overflow-x: scroll;
 }
-.portfolio .container .category-filter button {
+.portfolio .container .category-filter .wrapper {
+  display: flex;
+  gap: 3px;
+}
+.portfolio .container .category-filter .wrapper button {
   width: 150px;
   cursor: pointer;
   padding: 5px;
 }
 @media (max-width: 768px) {
-  .portfolio .container .category-filter button {
-    width: 150px;
+  .portfolio .container .category-filter .wrapper button {
+    font-size: small;
   }
 }
 .portfolio .container .portfolio-list {
