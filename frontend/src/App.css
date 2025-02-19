@@ -3,14 +3,15 @@ body {
 }
 
 header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   background-color: #2E2E2E;
   color: #FFFFFF;
   z-index: 1;
+  padding: 10px;
 }
 header .logo {
   width: 70px;
@@ -51,12 +52,21 @@ header nav .nav-links li a {
   text-decoration: none;
   color: #FFFFFF;
   font-weight: bold;
+  font-size: small;
 }
-header nav .nav-links li a:hover {
-  text-decoration: underline;
+header nav .nav-links li a:hover::after {
+  content: "";
+  background-color: white;
+  height: 2.5px;
+  width: 100%;
+  display: block;
 }
-header nav .nav-links li .active {
-  text-decoration: underline;
+header nav .nav-links li .active::after {
+  content: "";
+  background-color: white;
+  height: 2.5px;
+  width: 100%;
+  display: block;
 }
 header nav .inactive {
   right: -100%;
@@ -129,12 +139,10 @@ header .nav2 .burger svg {
 }
 .about .container .wrapper {
   display: flex;
-  justify-content: center;
   gap: 5px;
 }
 .about .container .wrapper .detail {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
   gap: 10px;
   width: 80%;
 }
@@ -155,16 +163,17 @@ header .nav2 .burger svg {
 .portfolio {
   padding: 10px;
 }
-.portfolio .container {
-  padding: 10px;
-}
-.portfolio .container h2 {
-  margin-bottom: 10px;
+.portfolio h3 {
+  margin-bottom: 5px;
   color: #2E2E2E;
+}
+.portfolio .container {
+  display: flex;
+  flex-direction: column;
 }
 .portfolio .container .portfolio-item {
   width: 100%;
-  background-color: #2E2E2E;
+  background-color: #B0B0B0;
   text-decoration: none;
   color: #FFFFFF;
   position: relative;
@@ -172,14 +181,14 @@ header .nav2 .burger svg {
 .portfolio .container .portfolio-item img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
   height: 300px;
 }
 .portfolio .container .portfolio-item .item-info {
   position: absolute;
   bottom: 0;
   padding: 10px;
-  background-color: #2E2E2E;
+  background-color: #CD7F32;
+  width: 100%;
 }
 .portfolio .container .portfolio-item .item-info a {
   text-decoration: none;
@@ -194,35 +203,38 @@ header .nav2 .burger svg {
 .portfolio .container .category-filter {
   display: flex;
   gap: 5px;
-  margin-bottom: 10px;
 }
-.portfolio .container .category-filter .wrapper button {
-  width: 150px;
+.portfolio .container .category-filter button {
+  width: 175px;
   cursor: pointer;
   padding: 5px;
+  border: none;
+  background-color: #B0B0B0;
 }
 @media (max-width: 768px) {
   .portfolio .container .category-filter button {
     width: 150px;
   }
 }
-.portfolio .container .category-filter .wrapper button:hover {
+.portfolio .container .category-filter button:hover {
   background-color: #2E2E2E;
   color: #FFFFFF;
   border: none;
 }
-.portfolio .container .category-filter .active {
-  background-color: #2E2E2E;
+.portfolio .container .active {
+  background-color: #2e2e2e;
   border: none;
   color: #FFFFFF;
 }
-.portfolio .container .portfolio-list {
+.portfolio .portfolio-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
+  background-color: #2E2E2E;
+  padding: 5px;
 }
 @media (max-width: 768px) {
-  .portfolio .container .portfolio-list {
+  .portfolio .portfolio-list {
     grid-template-columns: 1fr;
   }
 }

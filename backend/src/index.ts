@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import blogRoutes from './routes/blogRoutes';
 import contactRoutes from './routes/contactRoutes';
 import dotenv from 'dotenv';
 import { connectToDatabase } from './database';
@@ -16,7 +15,6 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Routes
-app.use('/api/blogs', blogRoutes);
 app.use('/api/contact', contactRoutes);
 
 // Start server and connect to database

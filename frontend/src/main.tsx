@@ -7,10 +7,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Contact from './pages/Contact.tsx';
+import Contact from './pages/contact/Contact.tsx';
 import About from './pages/About/About.tsx';
 import NotFoundPage from './pages/NotFoundPage.tsx';
-import Home from './pages/Home.tsx';
+import Home from './pages/Home/Home.tsx';
 import Portfolio from './pages/Portfolio/Portfolio.tsx';
 
 const router = createBrowserRouter([

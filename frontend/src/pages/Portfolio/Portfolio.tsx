@@ -27,8 +27,8 @@ const Portfolio: React.FC = () => {
       <meta name="twitter:image" content="https://example.com/your-thumbnail-image.jpg" />
     </Helmet>
     <div className='portfolio'>
+      <h3>Portfolio</h3>
       <div className="container">
-        <h2>My Portfolio</h2>
         <CategoryFilter
           categories={categories}
           selectedCategory={selectedCategory}

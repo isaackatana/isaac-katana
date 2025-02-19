@@ -24,11 +24,8 @@ function Header() {
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/portfolio">Portfolio</NavLink></li>
-            <li><NavLink to="/blog">Blog</NavLink></li>
             <li><NavLink to="/contact">Contact</NavLink></li>
           </ul>
-      </nav>
-      
       <div className="nav2">
       <div className="social-links">
         <a href="https://github.com/isaackatana" target="_blank" rel="noopener noreferrer"><FaGithub/></a>
@@ -42,6 +39,8 @@ function Header() {
           {isMenuOpen ? <FaXmark onClick={toggleMenu}/> : <FaBars onClick={toggleMenu}/>}
         </div>
       </div>
+      </nav>
+      
     </header>
     </>
   )
